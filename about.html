@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Learn about StacklyEarth — our story, mission, team, and the impact we've made restoring ecosystems worldwide." />
+  <title>About Us | StacklyEarth</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <noscript>
+    <style>
+      .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <!-- Header (reused from homepage) -->
+  <header class="header header--inner" id="header">
+    <div class="header__container container">
+      <a href="index.html" class="header__logo" aria-label="StacklyEarth Home">
+        <img src="assets/images/logo-stackly.webp" alt="StacklyEarth" class="header__logo-icon" width="120" height="120" />
+      </a>
+
+      <nav class="header__nav" aria-label="Primary">
+        <ul class="header__menu">
+          <li><a href="index.html" class="header__link">Home</a></li>
+          <li><a href="about.html" class="header__link header__link--active">About</a></li>
+          <li><a href="projects.html" class="header__link">Projects</a></li>
+          <li><a href="get-involved.html" class="header__link">Get Involved</a></li>
+          <li><a href="contact.html" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__auth">
+        <a href="auth/login.html" class="header__auth-btn header__auth-btn--ghost">Sign In</a>
+        <a href="auth/signup.html" class="header__auth-btn header__auth-btn--primary">Sign Up</a>
+      </div>
+
+      <button class="header__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="header__burger"></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="header__overlay" id="mobile-menu" aria-hidden="true">
+  <div class="mobnav">
+    <div class="mobnav__topbar">
+      <a href="index.html" class="mobnav__logo" aria-label="StacklyEarth Home">
+        <img src="assets/images/logo-stackly.webp" alt="StacklyEarth" width="120" height="120" />
+      </a>
+      <button class="mobnav__close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobnav__scroll">
+      <nav class="mobnav__nav" aria-label="Mobile navigation">
+        <ul class="mobnav__menu">
+          <li><a href="index.html" class="mobnav__link" data-index="0"><span>Home</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+          <li><a href="about.html" class="mobnav__link" data-index="1"><span>About</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+          <li><a href="projects.html" class="mobnav__link" data-index="2"><span>Projects</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+          <li><a href="get-involved.html" class="mobnav__link" data-index="3"><span>Get Involved</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+          <li><a href="contact.html" class="mobnav__link" data-index="4"><span>Contact</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+        </ul>
+      </nav>
+      <div class="mobnav__cards">
+        <a href="about.html#impact" class="mobnav__card">
+          <div class="mobnav__card-img"><img src="assets/images/mission.webp" alt="" loading="lazy" /></div>
+          <div class="mobnav__card-body">
+            <span class="mobnav__card-eyebrow">Our Impact</span>
+            <h4 class="mobnav__card-title">1.2M+ Trees Planted</h4>
+            <p class="mobnav__card-text">See how we're restoring ecosystems across 48 countries.</p>
+          </div>
+        </a>
+        <a href="projects.html" class="mobnav__card">
+          <div class="mobnav__card-img"><img src="assets/images/project-1.webp" alt="" loading="lazy" /></div>
+          <div class="mobnav__card-body">
+            <span class="mobnav__card-eyebrow">Latest Project</span>
+            <h4 class="mobnav__card-title">Amazon Reforestation</h4>
+            <p class="mobnav__card-text">Restoring a critical 12,000-hectare rainforest corridor.</p>
+          </div>
+        </a>
+        <a href="get-involved.html" class="mobnav__card">
+          <div class="mobnav__card-img"><img src="assets/images/volunteer.webp" alt="" loading="lazy" /></div>
+          <div class="mobnav__card-body">
+            <span class="mobnav__card-eyebrow">Join Us</span>
+            <h4 class="mobnav__card-title">Become a Volunteer</h4>
+            <p class="mobnav__card-text">8,500+ volunteers making a difference worldwide.</p>
+          </div>
+        </a>
+      </div>
+      <div class="mobnav__cta">
+        <a href="auth/signup.html" class="mobnav__cta-btn mobnav__cta-btn--primary">Sign Up</a>
+        <a href="auth/login.html" class="mobnav__cta-btn mobnav__cta-btn--ghost">Sign In</a>
+      </div>
+      <div class="mobnav__social">
+        <a href="#" class="mobnav__social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" class="mobnav__social-link" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+        <a href="#" class="mobnav__social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.36 7.15 2.21 8.42 2.15 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.23.23 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.16 4.35 2.63 6.82 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.16 6.82-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.77 2.7 21.3.23 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+        <a href="#" class="mobnav__social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+      </div>
+      <div class="mobnav__footer">
+        <p>hello@stacklyearth.org</p>
+        <p>Made with care for Earth</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <main>
+    <!-- ============================================
+         1. HERO — Split Story Intro
+         ============================================ -->
+    <section class="about-hero" id="top">
+      <div class="about-hero__bg"></div>
+      <div class="about-hero__overlay"></div>
+      <div class="about-hero__glow" aria-hidden="true"></div>
+      <div class="about-hero__content container">
+        <div class="about-hero__text">
+          <nav class="about-hero__breadcrumb reveal" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">About Us</span>
+          </nav>
+          <h1 class="about-hero__title reveal">Our Story</h1>
+          <p class="about-hero__lead reveal">
+            Born from a belief that collective action can heal the planet, StacklyEarth has spent years turning compassion into measurable environmental restoration.
+          </p>
+          <div class="about-hero__actions reveal">
+            <a href="404.html" class="btn btn--primary btn--large">Explore Our Journey</a>
+            <a href="404.html" class="btn btn--outline btn--large btn--light">Meet the Team</a>
+          </div>
+        </div>
+        <div class="about-hero__visual reveal">
+          <div class="about-hero__image">
+            <img src="assets/images/about-story.webp" alt="Volunteers planting native trees together" loading="eager" />
+          </div>
+          <div class="about-hero__floating-card glass">
+            <div class="about-hero__floating-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <strong>1.2M+</strong>
+              <span>Trees planted worldwide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         2. OUR JOURNEY — Premium Timeline
+         ============================================ -->
+    <section class="journey" id="story">
+      <div class="journey__bg"></div>
+      <div class="journey__overlay"></div>
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow section__eyebrow--light">Our Journey</span>
+          <h2 class="section__title section__title--light">From a single seed to a global movement</h2>
+          <p class="section__subtitle section__subtitle--light">Every milestone reflects the dedication of thousands of volunteers, donors, and partners who share our vision.</p>
+        </div>
+
+        <div class="journey__timeline">
+          <div class="journey__track">
+            <div class="journey__line" aria-hidden="true"></div>
+            <div class="journey__line-fill" aria-hidden="true"></div>
+          </div>
+
+          <div class="journey__items">
+            <article class="journey__item" data-journey>
+              <div class="journey__dot">
+                <span class="journey__dot-inner"></span>
+                <span class="journey__dot-pulse"></span>
+              </div>
+              <div class="journey__card">
+                <div class="journey__card-bg" style="background-image: url('assets/images/project-1.webp')"></div>
+                <div class="journey__card-gradient"></div>
+                <div class="journey__card-content">
+                  <div class="journey__year-badge">
+                    <span class="journey__year-line"></span>
+                    <span class="journey__year">2018</span>
+                    <span class="journey__year-line"></span>
+                  </div>
+                  <h3 class="journey__title">The Beginning</h3>
+                  <p class="journey__text">Founded by a group of marine biologists and foresters in Costa Rica, StacklyEarth planted its first 10,000 native trees in the Osa Peninsula.</p>
+                  <div class="journey__metrics">
+                    <div class="journey__metric">
+                      <strong>10K</strong>
+                      <span>Trees Planted</span>
+                    </div>
+                    <div class="journey__metric-divider"></div>
+                    <div class="journey__metric">
+                      <strong>1</strong>
+                      <span>Country</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="journey__item journey__item--right" data-journey>
+              <div class="journey__dot">
+                <span class="journey__dot-inner"></span>
+                <span class="journey__dot-pulse"></span>
+              </div>
+              <div class="journey__card">
+                <div class="journey__card-bg" style="background-image: url('assets/images/project-2.webp')"></div>
+                <div class="journey__card-gradient"></div>
+                <div class="journey__card-content">
+                  <div class="journey__year-badge">
+                    <span class="journey__year-line"></span>
+                    <span class="journey__year">2019</span>
+                    <span class="journey__year-line"></span>
+                  </div>
+                  <h3 class="journey__title">Going Global</h3>
+                  <p class="journey__text">Expanded to 12 countries across Southeast Asia and East Africa, launching ocean cleanup programs in the Philippines and Kenya.</p>
+                  <div class="journey__metrics">
+                    <div class="journey__metric">
+                      <strong>12</strong>
+                      <span>Countries</span>
+                    </div>
+                    <div class="journey__metric-divider"></div>
+                    <div class="journey__metric">
+                      <strong>2</strong>
+                      <span>Oceans</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="journey__item" data-journey>
+              <div class="journey__dot">
+                <span class="journey__dot-inner"></span>
+                <span class="journey__dot-pulse"></span>
+              </div>
+              <div class="journey__card">
+                <div class="journey__card-bg" style="background-image: url('assets/images/project-3.webp')"></div>
+                <div class="journey__card-gradient"></div>
+                <div class="journey__card-content">
+                  <div class="journey__year-badge">
+                    <span class="journey__year-line"></span>
+                    <span class="journey__year">2021</span>
+                    <span class="journey__year-line"></span>
+                  </div>
+                  <h3 class="journey__title">One Million Trees</h3>
+                  <p class="journey__text">Reached the milestone of one million trees planted. Launched the Wildlife Corridor Initiative connecting fragmented habitats in Brazil.</p>
+                  <div class="journey__metrics">
+                    <div class="journey__metric">
+                      <strong>1M+</strong>
+                      <span>Trees</span>
+                    </div>
+                    <div class="journey__metric-divider"></div>
+                    <div class="journey__metric">
+                      <strong>24</strong>
+                      <span>Countries</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="journey__item journey__item--right" data-journey>
+              <div class="journey__dot">
+                <span class="journey__dot-inner"></span>
+                <span class="journey__dot-pulse"></span>
+              </div>
+              <div class="journey__card">
+                <div class="journey__card-bg" style="background-image: url('assets/images/project-4.webp')"></div>
+                <div class="journey__card-gradient"></div>
+                <div class="journey__card-content">
+                  <div class="journey__year-badge">
+                    <span class="journey__year-line"></span>
+                    <span class="journey__year">2023</span>
+                    <span class="journey__year-line"></span>
+                  </div>
+                  <h3 class="journey__title">Community Power</h3>
+                  <p class="journey__text">Engaged 5,000+ volunteers worldwide. Won the Global Restoration Award for our Amazon Reforestation Corridor project.</p>
+                  <div class="journey__metrics">
+                    <div class="journey__metric">
+                      <strong>5K+</strong>
+                      <span>Volunteers</span>
+                    </div>
+                    <div class="journey__metric-divider"></div>
+                    <div class="journey__metric">
+                      <strong>1</strong>
+                      <span>Global Award</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="journey__item" data-journey>
+              <div class="journey__dot">
+                <span class="journey__dot-inner"></span>
+                <span class="journey__dot-pulse"></span>
+              </div>
+              <div class="journey__card">
+                <div class="journey__card-bg" style="background-image: url('assets/images/project-5.webp')"></div>
+                <div class="journey__card-gradient"></div>
+                <div class="journey__card-content">
+                  <div class="journey__year-badge">
+                    <span class="journey__year-line"></span>
+                    <span class="journey__year">2025</span>
+                    <span class="journey__year-line"></span>
+                  </div>
+                  <h3 class="journey__title">Today & Beyond</h3>
+                  <p class="journey__text">Active in 48 countries with 1.2 million trees planted. Pioneering AI-driven ecosystem monitoring and community-led conservation models.</p>
+                  <div class="journey__metrics">
+                    <div class="journey__metric">
+                      <strong>48</strong>
+                      <span>Countries</span>
+                    </div>
+                    <div class="journey__metric-divider"></div>
+                    <div class="journey__metric">
+                      <strong>1.2M</strong>
+                      <span>Trees</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    </section>
+
+    <!-- ============================================
+         3. MISSION, VISION & VALUES
+         ============================================ -->
+    <section class="values section" id="values">
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow">What Drives Us</span>
+          <h2 class="section__title">Mission, Vision & Values</h2>
+        </div>
+
+        <div class="values__grid">
+          <article class="values__card reveal-up">
+            <div class="values__card-bg" style="background-image: url('assets/images/about-approach.webp')"></div>
+            <div class="values__card-overlay"></div>
+            <div class="values__card-content">
+              <div class="values__icon-wrap">
+                <div class="values__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+              </div>
+              <h3>Our Mission</h3>
+              <p>To restore degraded ecosystems, protect endangered species, and empower communities through science-driven, transparent conservation action.</p>
+              <a href="404.html" class="values__link">See our impact <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="values__card values__card--featured reveal-up">
+            <div class="values__card-bg" style="background-image: url('assets/images/about-values.webp')"></div>
+            <div class="values__card-overlay"></div>
+            <div class="values__card-content">
+              <div class="values__icon-wrap">
+                <div class="values__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+              </div>
+              <h3>Our Vision</h3>
+              <p>A world where thriving ecosystems and flourishing communities coexist — where every person is a steward of the natural world.</p>
+              <a href="404.html" class="values__link">Our journey <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="values__card reveal-up">
+            <div class="values__card-bg" style="background-image: url('assets/images/mission.webp')"></div>
+            <div class="values__card-overlay"></div>
+            <div class="values__card-content">
+              <div class="values__icon-wrap">
+                <div class="values__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+              </div>
+              <h3>Our Values</h3>
+              <p>Integrity, transparency, community empowerment, scientific rigor, and an unwavering commitment to measurable impact guide every decision.</p>
+              <a href="404.html" class="values__link">Meet the team <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         4. OUR IMPACT — Advanced Stats
+         ============================================ -->
+    <section class="impact section" id="impact">
+      <div class="impact__bg"></div>
+      <div class="impact__overlay"></div>
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow section__eyebrow--light">Our Impact</span>
+          <h2 class="section__title section__title--light">Numbers that speak louder than words</h2>
+        </div>
+
+        <div class="impact__grid">
+          <div class="impact__item reveal-scale">
+            <div class="impact__ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-accent)" stroke-width="6" stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round" class="impact__progress" data-progress="85"/>
+              </svg>
+              <span class="impact__number counter" data-target="1200000" data-suffix="+">0</span>
+            </div>
+            <span class="impact__label">Trees Planted</span>
+          </div>
+
+          <div class="impact__item impact__item--offset reveal-scale">
+            <div class="impact__ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-accent)" stroke-width="6" stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round" class="impact__progress" data-progress="72"/>
+              </svg>
+              <span class="impact__number counter" data-target="48" data-suffix="">0</span>
+            </div>
+            <span class="impact__label">Countries Active</span>
+          </div>
+
+          <div class="impact__item reveal-scale">
+            <div class="impact__ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-accent)" stroke-width="6" stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round" class="impact__progress" data-progress="68"/>
+              </svg>
+              <span class="impact__number counter" data-target="8500" data-suffix="+">0</span>
+            </div>
+            <span class="impact__label">Volunteers Engaged</span>
+          </div>
+
+          <div class="impact__item reveal-scale">
+            <div class="impact__ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-accent)" stroke-width="6" stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round" class="impact__progress" data-progress="92"/>
+              </svg>
+              <span class="impact__number counter" data-target="340" data-suffix="K">0</span>
+            </div>
+            <span class="impact__label">Tons CO₂ Captured</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         5. MEET THE TEAM
+         ============================================ -->
+    <section class="team section" id="team">
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow">Our People</span>
+          <h2 class="section__title">Meet the team behind the mission</h2>
+          <p class="section__subtitle">Passionate experts in conservation, science, community development, and environmental policy.</p>
+        </div>
+
+        <div class="team__grid">
+          <article class="team__card reveal-up">
+            <div class="team__avatar">
+              <img src="assets/images/team-1.webp" alt="Elena Morales" loading="lazy" />
+              <div class="team__social">
+                <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+                <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+              </div>
+            </div>
+            <h3>Elena Morales</h3>
+            <span class="team__role">Founder & CEO</span>
+            <p>Marine biologist with 20 years of field experience in tropical ecosystem restoration.</p>
+          </article>
+
+          <article class="team__card reveal-up">
+            <div class="team__avatar">
+              <img src="assets/images/team-2.webp" alt="James Chen" loading="lazy" />
+              <div class="team__social">
+                <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+                <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+              </div>
+            </div>
+            <h3>James Chen</h3>
+            <span class="team__role">Director of Programs</span>
+            <p>Environmental engineer leading our reforestation and wildlife corridor initiatives.</p>
+          </article>
+
+          <article class="team__card reveal-up">
+            <div class="team__avatar">
+              <img src="assets/images/team-3.webp" alt="Aisha Patel" loading="lazy" />
+              <div class="team__social">
+                <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+                <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+              </div>
+            </div>
+            <h3>Aisha Patel</h3>
+            <span class="team__role">Head of Community</span>
+            <p>Sociologist specializing in community-led conservation models across Sub-Saharan Africa.</p>
+          </article>
+
+          <article class="team__card reveal-up">
+            <div class="team__avatar">
+              <img src="assets/images/team-4.webp" alt="Lars Kohler" loading="lazy" />
+              <div class="team__social">
+                <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+                <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+              </div>
+            </div>
+            <h3>Lars Kohler</h3>
+            <span class="team__role">Chief Scientist</span>
+            <p>Climatologist developing our carbon monitoring and AI-driven ecosystem health assessment tools.</p>
+          </article>
+
+          <article class="team__card reveal-up">
+            <div class="team__avatar">
+              <img src="assets/images/team-5.webp" alt="Sofia Nguyen" loading="lazy" />
+              <div class="team__social">
+                <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+                <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+              </div>
+            </div>
+            <h3>Sofia Nguyen</h3>
+            <span class="team__role">Volunteer Director</span>
+            <p>Coordinates 8,500+ volunteers across 48 countries, building networks of environmental stewards.</p>
+          </article>
+
+          <article class="team__card reveal-up">
+            <div class="team__avatar">
+              <img src="assets/images/team-6.webp" alt="David Mitchell" loading="lazy" />
+              <div class="team__social">
+                <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+                <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+              </div>
+            </div>
+            <h3>David Mitchell</h3>
+            <span class="team__role">Policy & Advocacy</span>
+            <p>Environmental lawyer fighting for stronger conservation policies at national and international levels.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         6. OUR APPROACH — Ultra Premium Process
+         ============================================ -->
+    <section class="process" id="approach">
+      <div class="process__bg"></div>
+      <div class="process__overlay"></div>
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow section__eyebrow--light">How We Work</span>
+          <h2 class="section__title section__title--light">Our approach to lasting change</h2>
+          <p class="section__subtitle section__subtitle--light">Every project follows a proven framework that combines scientific rigor with community leadership.</p>
+        </div>
+
+        <div class="process__flow">
+          <div class="process__line" aria-hidden="true">
+            <div class="process__line-fill"></div>
+          </div>
+
+          <div class="process__step" data-process>
+            <div class="process__step-marker">
+              <div class="process__step-dot">
+                <span class="process__step-number">01</span>
+              </div>
+              <div class="process__step-ring"></div>
+            </div>
+            <div class="process__step-card">
+              <div class="process__step-card-inner">
+                <div class="process__step-card-bg" style="background-image: url('assets/images/project-1.webp')"></div>
+                <div class="process__step-card-overlay"></div>
+                <div class="process__step-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                </div>
+                <div class="process__step-content">
+                  <h3>Assess & Map</h3>
+                  <p>Using satellite imagery, acoustic sensors, and on-the-ground surveys, we identify the most critical areas for restoration and protection.</p>
+                  <p>Our team analyzes decades of ecological data to prioritize regions where intervention will have the greatest impact.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="process__step process__step--reverse" data-process>
+            <div class="process__step-marker">
+              <div class="process__step-dot">
+                <span class="process__step-number">02</span>
+              </div>
+              <div class="process__step-ring"></div>
+            </div>
+            <div class="process__step-card">
+              <div class="process__step-card-inner">
+                <div class="process__step-card-bg" style="background-image: url('assets/images/volunteer.webp')"></div>
+                <div class="process__step-card-overlay"></div>
+                <div class="process__step-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <div class="process__step-content">
+                  <h3>Engage Communities</h3>
+                  <p>We partner with local leaders, training volunteers and building economic incentives that make conservation self-sustaining.</p>
+                  <p>From youth clubs to indigenous stewards, we empower people to become guardians of their own natural resources.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="process__step" data-process>
+            <div class="process__step-marker">
+              <div class="process__step-dot">
+                <span class="process__step-number">03</span>
+              </div>
+              <div class="process__step-ring"></div>
+            </div>
+            <div class="process__step-card">
+              <div class="process__step-card-inner">
+                <div class="process__step-card-bg" style="background-image: url('assets/images/cause-forest.webp')"></div>
+                <div class="process__step-card-overlay"></div>
+                <div class="process__step-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="process__step-content">
+                  <h3>Restore & Protect</h3>
+                  <p>Native species are planted, wildlife corridors established, and marine habitats cleaned — all guided by ecological science.</p>
+                  <p>Every action is measured against biodiversity targets and carbon capture benchmarks to ensure real results.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="process__step process__step--reverse" data-process>
+            <div class="process__step-marker">
+              <div class="process__step-dot">
+                <span class="process__step-number">04</span>
+              </div>
+              <div class="process__step-ring"></div>
+            </div>
+            <div class="process__step-card">
+              <div class="process__step-card-inner">
+                <div class="process__step-card-bg" style="background-image: url('assets/images/cause-climate.webp')"></div>
+                <div class="process__step-card-overlay"></div>
+                <div class="process__step-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                </div>
+                <div class="process__step-content">
+                  <h3>Monitor & Scale</h3>
+                  <p>AI-powered monitoring tracks growth, carbon capture, and biodiversity — data that informs scaling successful models globally.</p>
+                  <p>Real-time dashboards give donors and partners full transparency into every dollar invested.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         7. PARTNERS & COLLABORATIONS
+         ============================================ -->
+    <section class="partners-about section" id="partners">
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow">Collaborations</span>
+          <h2 class="section__title">Trusted by leading organizations</h2>
+          <p class="section__subtitle">We work alongside governments, NGOs, and corporations committed to a sustainable future.</p>
+        </div>
+      </div>
+      <div class="partners-about__marquee" aria-label="Partner logos">
+        <div class="partners-about__track">
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">GreenLeaf</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">EcoBank</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">TerraFund</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">Oceanic</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">WildTrust</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">RenewCo</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">BioSphere</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">NatureFirst</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">GreenLeaf</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">EcoBank</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">TerraFund</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">Oceanic</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">WildTrust</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">RenewCo</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">BioSphere</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 140 48"><text x="70" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">NatureFirst</text></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         8. CALL TO ACTION
+         ============================================ -->
+    <section class="about-cta" id="join">
+      <div class="about-cta__bg"></div>
+      <div class="about-cta__overlay"></div>
+      <div class="about-cta__content container">
+        <span class="about-cta__eyebrow reveal">Take Action</span>
+        <h2 class="about-cta__title reveal">Join us in making a<br />lasting difference</h2>
+        <p class="about-cta__lead reveal">
+          Whether you donate, volunteer, or spread the word — every action ripples outward. Together, we can restore what's been lost and protect what remains.
+        </p>
+        <div class="about-cta__actions reveal">
+          <a href="get-involved.html#donate" class="btn btn--primary btn--large">Donate Now</a>
+          <a href="get-involved.html" class="btn btn--outline btn--large btn--light">Become a Volunteer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (shared from homepage) -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="StacklyEarth Home">
+            <img src="assets/images/logo-stackly.webp" alt="StacklyEarth" class="footer__logo-icon" width="120" height="120" />
+          </a>
+          <p>Restoring ecosystems, protecting wildlife, and empowering communities through transparent, science-driven conservation.</p>
+          <div class="footer__social">
+            <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+            <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.36 7.15 2.21 8.42 2.15 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.23.23 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.16 4.35 2.63 6.82 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.16 6.82-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.77 2.7 21.3.23 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+            <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html#impact">Impact Reports</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Causes</h4>
+          <ul>
+            <li><a href="404.html">Forest Restoration</a></li>
+            <li><a href="404.html">Ocean Conservation</a></li>
+            <li><a href="404.html">Wildlife Protection</a></li>
+            <li><a href="404.html">Climate Action</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Newsletter</h4>
+          <p>Get monthly restoration updates, impact stories, and ways to help — straight to your inbox.</p>
+          <form class="footer__form" action="#" method="post" novalidate>
+            <label for="footer-email-about" class="visually-hidden">Email address</label>
+            <input type="email" id="footer-email-about" name="email" placeholder="Your email" required />
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+          </form>
+          <p class="footer__newsletter-count"><strong>12,400+</strong> subscribers trust us</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 StacklyEarth. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

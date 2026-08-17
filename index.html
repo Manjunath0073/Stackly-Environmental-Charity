@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="StacklyEarth is a premium environmental charity restoring forests, oceans, and wildlife through community-driven action." />
+  <title>StacklyEarth | Environmental Charity</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <noscript>
+    <style>
+      .reveal,
+      .reveal-up {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__container container">
+      <a href="index.html" class="header__logo" aria-label="StacklyEarth Home">
+        <img src="assets/images/logo-stackly.webp" alt="StacklyEarth" class="header__logo-icon" width="120" height="120" />
+      </a>
+
+      <nav class="header__nav" aria-label="Primary">
+        <ul class="header__menu">
+          <li><a href="index.html" class="header__link">Home</a></li>
+          <li><a href="about.html" class="header__link">About</a></li>
+          <li><a href="projects.html" class="header__link">Projects</a></li>
+          <li><a href="get-involved.html" class="header__link">Get Involved</a></li>
+          <li><a href="contact.html" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__auth">
+        <a href="auth/login.html" class="header__auth-btn header__auth-btn--ghost">Sign In</a>
+        <a href="auth/signup.html" class="header__auth-btn header__auth-btn--primary">Sign Up</a>
+      </div>
+
+      <button class="header__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="header__burger"></span>
+      </button>
+    </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay (outside header) -->
+  <div class="header__overlay" id="mobile-menu" aria-hidden="true">
+    <div class="mobnav">
+      <!-- Top Bar -->
+      <div class="mobnav__topbar">
+        <a href="index.html" class="mobnav__logo" aria-label="StacklyEarth Home">
+          <img src="assets/images/logo-stackly.webp" alt="StacklyEarth" width="120" height="120" />
+        </a>
+        <button class="mobnav__close" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Scrollable Content -->
+      <div class="mobnav__scroll">
+        <!-- Primary Navigation -->
+        <nav class="mobnav__nav" aria-label="Mobile navigation">
+          <ul class="mobnav__menu">
+              <li><a href="index.html" class="mobnav__link" data-index="0"><span>Home</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+              <li><a href="about.html" class="mobnav__link" data-index="1"><span>About</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+              <li><a href="projects.html" class="mobnav__link" data-index="2"><span>Projects</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+              <li><a href="get-involved.html" class="mobnav__link" data-index="3"><span>Get Involved</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+              <li><a href="contact.html" class="mobnav__link" data-index="4"><span>Contact</span><span class="mobnav__link-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></a></li>
+          </ul>
+        </nav>
+
+        <!-- Secondary Content Cards -->
+        <div class="mobnav__cards">
+          <a href="#impact" class="mobnav__card">
+            <div class="mobnav__card-img">
+              <img src="assets/images/mission.webp" alt="" loading="lazy" />
+            </div>
+            <div class="mobnav__card-body">
+              <span class="mobnav__card-eyebrow">Our Impact</span>
+              <h4 class="mobnav__card-title">1.2M+ Trees Planted</h4>
+              <p class="mobnav__card-text">See how we're restoring ecosystems across 48 countries.</p>
+            </div>
+          </a>
+          <a href="projects.html" class="mobnav__card">
+            <div class="mobnav__card-img">
+              <img src="assets/images/project-1.webp" alt="" loading="lazy" />
+            </div>
+            <div class="mobnav__card-body">
+              <span class="mobnav__card-eyebrow">Latest Project</span>
+              <h4 class="mobnav__card-title">Amazon Reforestation</h4>
+              <p class="mobnav__card-text">Restoring a critical 12,000-hectare rainforest corridor.</p>
+            </div>
+          </a>
+          <a href="get-involved.html" class="mobnav__card">
+            <div class="mobnav__card-img">
+              <img src="assets/images/volunteer.webp" alt="" loading="lazy" />
+            </div>
+            <div class="mobnav__card-body">
+              <span class="mobnav__card-eyebrow">Join Us</span>
+              <h4 class="mobnav__card-title">Become a Volunteer</h4>
+              <p class="mobnav__card-text">8,500+ volunteers making a difference worldwide.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mobnav__cta">
+          <a href="auth/signup.html" class="mobnav__cta-btn mobnav__cta-btn--primary">Sign Up</a>
+          <a href="auth/login.html" class="mobnav__cta-btn mobnav__cta-btn--ghost">Sign In</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="mobnav__social">
+          <a href="#" class="mobnav__social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="mobnav__social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg>
+          </a>
+          <a href="#" class="mobnav__social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.36 7.15 2.21 8.42 2.15 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.23.23 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.16 4.35 2.63 6.82 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.16 6.82-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.77 2.7 21.3.23 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+          </a>
+          <a href="#" class="mobnav__social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg>
+          </a>
+        </div>
+
+        <!-- Footer Mini -->
+        <div class="mobnav__footer">
+          <p>hello@stacklyearth.org</p>
+          <p>Made with care for Earth</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero — Cinematic -->
+    <section class="hero hero--cinematic" id="home">
+      <div class="hero__bg" role="img" aria-label="Sunlit forest landscape"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__ambient" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <div class="hero__text">
+          <span class="hero__eyebrow reveal">Protecting nature for tomorrow</span>
+          <h1 class="hero__title reveal">Restore the Earth,<br />One Tree at a Time</h1>
+          <p class="hero__lead reveal">
+            We unite communities, science, and compassion to heal forests, clean oceans, and safeguard wildlife for generations to come.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="404.html" class="btn btn--primary btn--large">Donate Now</a>
+            <a href="404.html" class="btn btn--outline btn--large">Learn More</a>
+          </div>
+          <div class="hero__stats reveal">
+            <div class="hero__stat">
+              <strong class="counter" data-target="1200000" data-suffix="+">0</strong>
+              <span>Trees Planted</span>
+            </div>
+            <div class="hero__stat">
+              <strong class="counter" data-target="48" data-suffix="">0</strong>
+              <span>Countries</span>
+            </div>
+            <div class="hero__stat">
+              <strong class="counter" data-target="8500" data-suffix="+">0</strong>
+              <span>Volunteers</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__feature reveal">
+          <div class="hero__feature-card">
+            <img src="assets/images/campaign.webp" alt="Amazon Reforestation Corridor" loading="eager" />
+            <div class="hero__feature-body">
+              <span class="hero__feature-eyebrow">Featured Campaign</span>
+              <h3>Amazon Reforestation Corridor</h3>
+              <p>Restoring a critical 12,000-hectare rainforest corridor.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Support This Cause</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="404.html" class="scroll-indicator" aria-label="Scroll down">
+        <span class="scroll-indicator__mouse">
+          <span class="scroll-indicator__wheel"></span>
+        </span>
+      </a>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission section" id="about">
+      <div class="container">
+        <div class="mission__grid">
+          <div class="mission__content reveal-up">
+            <span class="section__eyebrow">Our Mission</span>
+            <h2 class="section__title">Healing the planet through collective action</h2>
+            <p class="mission__text">
+              StacklyEarth exists to reverse ecological damage and empower local communities. From reforestation corridors to ocean cleanups, every project is rooted in science, transparency, and hope.
+            </p>
+            <ul class="mission__list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Restore degraded ecosystems at scale
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Protect endangered wildlife and habitats
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Educate and mobilize global citizens
+              </li>
+            </ul>
+            <a href="404.html" class="btn btn--secondary">Explore Our Impact</a>
+          </div>
+
+          <div class="mission__visual reveal-up">
+            <img src="assets/images/mission.webp" alt="Volunteers planting native saplings together" loading="lazy" />
+            <div class="mission__card glass">
+              <span class="mission__card-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+              </span>
+              <div>
+                <strong>Carbon Negative</strong>
+                <p>Every project is measured for real climate impact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mission__stats">
+          <div class="mission__stat reveal-up">
+            <span class="counter" data-target="1200000" data-suffix="+">0</span>
+            <span class="mission__stat-label">Trees Planted</span>
+          </div>
+          <div class="mission__stat reveal-up">
+            <span class="counter" data-target="48" data-suffix="">0</span>
+            <span class="mission__stat-label">Countries Active</span>
+          </div>
+          <div class="mission__stat reveal-up">
+            <span class="counter" data-target="8500" data-suffix="+">0</span>
+            <span class="mission__stat-label">Volunteers</span>
+          </div>
+          <div class="mission__stat reveal-up">
+            <span class="counter" data-target="98" data-suffix="%">0</span>
+            <span class="mission__stat-label">Funds to Field</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Causes -->
+    <section class="causes section" id="causes">
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow">Focus Areas</span>
+          <h2 class="section__title">Where your support goes</h2>
+          <p class="section__subtitle">Four pillars guide every initiative we fund and every partnership we build.</p>
+        </div>
+
+        <div class="causes__grid">
+          <article class="cause-card reveal-up">
+            <div class="cause-card__media">
+              <img src="assets/images/cause-forest.webp" alt="Dense green forest canopy" loading="lazy" />
+              <span class="cause-card__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 22h20L12 2zm0 4.5L18.5 20H5.5L12 6.5z"/></svg>
+              </span>
+            </div>
+            <div class="cause-card__body">
+              <h3>Forest Restoration</h3>
+              <p>Replanting native trees, reviving watersheds, and reconnecting fragmented habitats.</p>
+              <a href="projects.html" class="link-arrow">Discover projects</a>
+            </div>
+          </article>
+
+          <article class="cause-card reveal-up">
+            <div class="cause-card__media">
+              <img src="assets/images/cause-ocean.webp" alt="Aerial view of a turquoise coastline" loading="lazy" />
+              <span class="cause-card__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14c2 0 3-1 4.5-1s2.5 1 4.5 1 3-1 4.5-1 2.5 1 4.5 1v4c-2 0-3-1-4.5-1s-2.5 1-4.5 1-3-1-4.5-1S5 18 3 18v-4zM3 6c2 0 3-1 4.5-1S10 6 12 6s3-1 4.5-1S19 6 21 6v4c-2 0-3-1-4.5-1S14 10 12 10s-3-1-4.5-1S5 10 3 10V6z"/></svg>
+              </span>
+            </div>
+            <div class="cause-card__body">
+              <h3>Ocean Conservation</h3>
+              <p>Removing plastic pollution, restoring coral reefs, and protecting marine biodiversity.</p>
+              <a href="projects.html" class="link-arrow">Discover projects</a>
+            </div>
+          </article>
+
+          <article class="cause-card reveal-up">
+            <div class="cause-card__media">
+              <img src="assets/images/cause-wildlife.webp" alt="Wildlife grazing on a green ridge" loading="lazy" />
+              <span class="cause-card__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5 7.51-3.22-7.52-3.22 3.22 7.52 7.52-3.22-10.74 3.22.51-3.22h-.01.01z"/></svg>
+              </span>
+            </div>
+            <div class="cause-card__body">
+              <h3>Wildlife Protection</h3>
+              <p>Anti-poaching patrols, wildlife corridors, and species recovery programs.</p>
+              <a href="projects.html" class="link-arrow">Discover projects</a>
+            </div>
+          </article>
+
+          <article class="cause-card reveal-up">
+            <div class="cause-card__media">
+              <img src="assets/images/cause-climate.webp" alt="Offshore wind turbines at sunset" loading="lazy" />
+              <span class="cause-card__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v9a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm0 13a1 1 0 0 1-1-1V5a1 1 0 0 1 2 0v9a1 1 0 0 1-1 1zm-1 4h2v3h-2z"/></svg>
+              </span>
+            </div>
+            <div class="cause-card__body">
+              <h3>Climate Action</h3>
+              <p>Renewable energy access, carbon sinks, and resilient community infrastructure.</p>
+              <a href="projects.html" class="link-arrow">Discover projects</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section section" id="impact">
+      <div class="container">
+        <div class="impact-section__header reveal-up">
+          <span class="section__eyebrow">Our Impact</span>
+          <h2 class="section__title">Making a measurable difference</h2>
+          <p class="section__subtitle">Every number represents real change — ecosystems restored, communities empowered, and a healthier planet for future generations.</p>
+        </div>
+
+        <div class="impact-section__cards">
+          <div class="impact-card reveal-up">
+            <div class="impact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V8M12 8C12 8 8 4 4 8c4 0 8 4 8 4zM12 8c0 0 4-4 8 0-4 0-8 4-8 4z"/><path d="M5 22h14"/></svg>
+            </div>
+            <div class="impact-card__body">
+              <span class="impact-card__number"><span class="counter" data-target="1200000" data-suffix="+">0</span></span>
+              <span class="impact-card__label">Trees Planted</span>
+              <p class="impact-card__text">Native species restored across 48 countries, rebuilding ecosystems and wildlife corridors.</p>
+            </div>
+          </div>
+
+          <div class="impact-card reveal-up">
+            <div class="impact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l2-6M16 12l-2-6M8 12h8M6 18c2-2 4-2 6 0s4 2 6 0"/></svg>
+            </div>
+            <div class="impact-card__body">
+              <span class="impact-card__number"><span class="counter" data-target="340" data-suffix="K">0</span></span>
+              <span class="impact-card__label">Tons CO₂ Captured</span>
+              <p class="impact-card__text">Our reforestation projects actively remove carbon from the atmosphere every year.</p>
+            </div>
+          </div>
+
+          <div class="impact-card reveal-up">
+            <div class="impact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="impact-card__body">
+              <span class="impact-card__number"><span class="counter" data-target="85" data-suffix="+">0</span></span>
+              <span class="impact-card__label">Restoration Sites</span>
+              <p class="impact-card__text">From tropical rainforests to coral reefs, each site is monitored for measurable outcomes.</p>
+            </div>
+          </div>
+
+          <div class="impact-card reveal-up">
+            <div class="impact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="impact-card__body">
+              <span class="impact-card__number"><span class="counter" data-target="200" data-suffix="K">0</span></span>
+              <span class="impact-card__label">People Educated</span>
+              <p class="impact-card__text">Training communities in sustainable practices to ensure lasting environmental change.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-section__progress reveal-up">
+          <h3 class="impact-section__progress-title">Program Progress</h3>
+          <div class="impact-bars">
+            <div class="impact-bar">
+              <div class="impact-bar__header">
+                <span class="impact-bar__label">Forest Restoration</span>
+                <span class="impact-bar__value">85%</span>
+              </div>
+              <div class="impact-bar__track">
+                <div class="impact-bar__fill" data-progress="85"></div>
+              </div>
+            </div>
+            <div class="impact-bar">
+              <div class="impact-bar__header">
+                <span class="impact-bar__label">Ocean Conservation</span>
+                <span class="impact-bar__value">72%</span>
+              </div>
+              <div class="impact-bar__track">
+                <div class="impact-bar__fill" data-progress="72"></div>
+              </div>
+            </div>
+            <div class="impact-bar">
+              <div class="impact-bar__header">
+                <span class="impact-bar__label">Wildlife Protection</span>
+                <span class="impact-bar__value">68%</span>
+              </div>
+              <div class="impact-bar__track">
+                <div class="impact-bar__fill" data-progress="68"></div>
+              </div>
+            </div>
+            <div class="impact-bar">
+              <div class="impact-bar__header">
+                <span class="impact-bar__label">Climate Action</span>
+                <span class="impact-bar__value">92%</span>
+              </div>
+              <div class="impact-bar__track">
+                <div class="impact-bar__fill" data-progress="92"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-section__cta reveal-up">
+          <a href="about.html#impact" class="btn btn--primary btn--large">See Our Full Impact Report</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Campaign -->
+    <section class="campaign section" id="campaign">
+      <div class="container">
+        <div class="campaign__grid">
+          <div class="campaign__media reveal-up">
+            <img src="assets/images/campaign.webp" alt="Misty mountain forest at sunrise" loading="lazy" />
+            <div class="campaign__badge">
+              <span>Featured</span>
+              <strong>Amazon Reforestation Corridor</strong>
+            </div>
+          </div>
+
+          <div class="campaign__body reveal-up">
+            <span class="section__eyebrow">Featured Campaign</span>
+            <h2 class="section__title">Amazon Reforestation Corridor</h2>
+            <p class="campaign__text">
+              We are restoring a critical 12,000-hectare corridor in the Amazon basin, reconnecting fragmented rainforest and creating a safe passage for endangered species.
+            </p>
+
+            <div class="campaign__metrics">
+              <div>
+                <strong>$487,000</strong>
+                <span>Raised</span>
+              </div>
+              <div>
+                <strong>$750,000</strong>
+                <span>Goal</span>
+              </div>
+            </div>
+
+            <div class="progress" aria-label="Campaign progress 65 percent">
+              <div class="progress__track">
+                <div class="progress__fill" data-progress="65"></div>
+              </div>
+              <span class="progress__value">65%</span>
+            </div>
+
+            <ul class="campaign__list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Plant 2.4 million native trees
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Employ 300 indigenous stewards
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Monitor wildlife with acoustic sensors
+              </li>
+            </ul>
+
+            <a href="404.html" class="btn btn--primary btn--large">Support This Cause</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <span class="section__eyebrow">Projects</span>
+          <h2 class="section__title">Restoration in action</h2>
+          <p class="section__subtitle">A glimpse of the landscapes, communities, and species we are protecting right now.</p>
+        </div>
+
+        <div class="projects__masonry">
+          <article class="project-card project-card--tall reveal-up">
+            <img src="assets/images/project-1.webp" alt="Forest restoration project" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Brazil</span>
+              <h3>Atlantic Forest Reconnection</h3>
+              <p>Reconnecting fragmented forest patches for jaguars and monkeys.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Read story</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up">
+            <img src="assets/images/project-2.webp" alt="Coastal conservation project" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Ivory Coast</span>
+              <h3>Mangrove Blue Carbon</h3>
+              <p>Protecting coastal villages through mangrove restoration.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Read story</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up">
+            <img src="assets/images/project-3.webp" alt="Wildlife corridor project" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Kenya</span>
+              <h3>Savanna Wildlife Corridors</h3>
+              <p>Community rangers safeguarding elephant migration routes.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Read story</a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--wide reveal-up">
+            <img src="assets/images/project-4.webp" alt="Rainforest conservation" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Indonesia</span>
+              <h3>Leuser Ecosystem Guardians</h3>
+              <p>Protecting one of Earth’s most biodiverse rainforests.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Read story</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up">
+            <img src="assets/images/project-5.webp" alt="Island reforestation project" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Amsterdam Island</span>
+              <h3>Sub-Antarctic Reforestation</h3>
+              <p>Restoring endemic flora on remote southern islands.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Read story</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up">
+            <img src="assets/images/project-6.webp" alt="Community tree planting" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">USA</span>
+              <h3>Urban Canopy Equity</h3>
+              <p>Bringing shade, clean air, and green jobs to cities.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Read story</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up">
+            <img src="assets/images/cause-climate.webp" alt="Climate action project" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="project-card__tag">Global</span>
+              <h3>Carbon Offset Initiative</h3>
+              <p>Helping businesses achieve net-zero through verified restoration.</p>
+              <a href="404.html" class="link-arrow link-arrow--light">Read story</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works section" id="how-it-works">
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow">How It Works</span>
+          <h2 class="section__title">From donation to forest floor</h2>
+        </div>
+
+        <div class="steps">
+          <div class="steps__line" aria-hidden="true"></div>
+
+          <div class="step reveal-up">
+            <div class="step__number">01</div>
+            <div class="step__body">
+              <h3>Choose a cause</h3>
+              <p>Browse verified restoration projects and pick the impact closest to your heart.</p>
+            </div>
+          </div>
+
+          <div class="step reveal-up">
+            <div class="step__number">02</div>
+            <div class="step__body">
+              <h3>Make a donation</h3>
+              <p>Every dollar is traceable. We keep overhead low and reporting transparent.</p>
+            </div>
+          </div>
+
+          <div class="step reveal-up">
+            <div class="step__number">03</div>
+            <div class="step__body">
+              <h3>We plant & protect</h3>
+              <p>Local teams plant trees, guard wildlife, and monitor ecosystem health.</p>
+            </div>
+          </div>
+
+          <div class="step reveal-up">
+            <div class="step__number">04</div>
+            <div class="step__body">
+              <h3>Watch impact grow</h3>
+              <p>Receive updates, GPS coordinates, and stories from the field.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Marquee -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow">Voices</span>
+          <h2 class="section__title">What our community says</h2>
+        </div>
+      </div>
+
+      <div class="marquee">
+        <div class="marquee__track">
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"StacklyEarth doesn't just plant trees—it rebuilds livelihoods. Seeing before-and-after satellite maps of our village forest brought tears to my eyes."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/volunteer.webp" alt="Maria Santos" loading="lazy" />
+              <div>
+                <strong>Maria Santos</strong>
+                <span>Community Lead, Brazil</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"As a corporate partner, we value their radical transparency. Every cent is accounted for, and the storytelling is world-class."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/campaign.webp" alt="David Chen" loading="lazy" />
+              <div>
+                <strong>David Chen</strong>
+                <span>Sustainability Director</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Volunteering with StacklyEarth changed my career path. The training, the people, and the tangible impact are unmatched."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/mission.webp" alt="Aisha Patel" loading="lazy" />
+              <div>
+                <strong>Aisha Patel</strong>
+                <span>Field Volunteer, Kenya</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"We raised $28,000 through our company challenge. StacklyEarth made it easy with their campaign tools and impact tracking."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/team-1.webp" alt="James Miller" loading="lazy" />
+              <div>
+                <strong>James Miller</strong>
+                <span>CSR Manager, TechCorp</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"The community training program gave us skills to protect our own land. This isn't aid—it's empowerment."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/team-2.webp" alt="Amara Okafor" loading="lazy" />
+              <div>
+                <strong>Amara Okafor</strong>
+                <span>Village Elder, Nigeria</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Our students planted 500 mangroves and learned more about ecology in one weekend than in a whole semester."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/team-3.webp" alt="Dr. Lin Wei" loading="lazy" />
+              <div>
+                <strong>Dr. Lin Wei</strong>
+                <span>Marine Biologist</span>
+              </div>
+            </footer>
+          </article>
+
+          <!-- Duplicate for seamless loop -->
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"StacklyEarth doesn't just plant trees—it rebuilds livelihoods. Seeing before-and-after satellite maps of our village forest brought tears to my eyes."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/volunteer.webp" alt="" loading="lazy" />
+              <div>
+                <strong>Maria Santos</strong>
+                <span>Community Lead, Brazil</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"As a corporate partner, we value their radical transparency. Every cent is accounted for, and the storytelling is world-class."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/campaign.webp" alt="" loading="lazy" />
+              <div>
+                <strong>David Chen</strong>
+                <span>Sustainability Director</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Volunteering with StacklyEarth changed my career path. The training, the people, and the tangible impact are unmatched."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/mission.webp" alt="" loading="lazy" />
+              <div>
+                <strong>Aisha Patel</strong>
+                <span>Field Volunteer, Kenya</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"We raised $28,000 through our company challenge. StacklyEarth made it easy with their campaign tools and impact tracking."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/team-1.webp" alt="" loading="lazy" />
+              <div>
+                <strong>James Miller</strong>
+                <span>CSR Manager, TechCorp</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"The community training program gave us skills to protect our own land. This isn't aid—it's empowerment."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/team-2.webp" alt="" loading="lazy" />
+              <div>
+                <strong>Amara Okafor</strong>
+                <span>Village Elder, Nigeria</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Our students planted 500 mangroves and learned more about ecology in one weekend than in a whole semester."</p>
+            <footer class="testimonial-card__author">
+              <img src="assets/images/team-3.webp" alt="" loading="lazy" />
+              <div>
+                <strong>Dr. Lin Wei</strong>
+                <span>Marine Biologist</span>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer -->
+    <section class="volunteer section" id="volunteer">
+      <div class="container">
+        <div class="volunteer__grid">
+          <div class="volunteer__media reveal-up">
+            <img src="assets/images/volunteer.webp" alt="Smiling volunteers working on a farm" loading="lazy" />
+          </div>
+          <div class="volunteer__body reveal-up">
+            <span class="section__eyebrow">Get Involved</span>
+            <h2 class="section__title">Become a force for nature</h2>
+            <p>
+              Whether you have a weekend, a skill, or a voice, there is a place for you in our global community of changemakers.
+            </p>
+            <ul class="volunteer__list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Join local planting events
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Mentor youth environmental clubs
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Advocate for policy change
+              </li>
+            </ul>
+            <a href="404.html" class="btn btn--primary btn--large">Become a Volunteer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog section" id="blog">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <span class="section__eyebrow">Insights</span>
+          <h2 class="section__title">Stories from the field</h2>
+          <p class="section__subtitle">News, science, and inspiration from the frontlines of restoration.</p>
+        </div>
+
+        <div class="blog__grid">
+          <article class="blog-card reveal-up">
+            <div class="blog-card__media">
+              <img src="assets/images/blog-1.webp" alt="Forest silhouettes in morning fog" loading="lazy" />
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>Science</span>
+                <time datetime="2026-07-14">Jul 14, 2026</time>
+              </div>
+              <h3>Why native forests outperform monocultures</h3>
+              <p>New research confirms that diverse, native plantings store more carbon and support more wildlife.</p>
+              <a href="404.html" class="link-arrow">Read article</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal-up">
+            <div class="blog-card__media">
+              <img src="assets/images/blog-2.webp" alt="Sandy beach and turquoise water" loading="lazy" />
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>Ocean</span>
+                <time datetime="2026-06-29">Jun 29, 2026</time>
+              </div>
+              <h3>The hidden power of mangrove coastlines</h3>
+              <p>Mangroves protect coasts, store carbon, and nurture fish—yet we lose them faster than any forest.</p>
+              <a href="404.html" class="link-arrow">Read article</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal-up">
+            <div class="blog-card__media">
+              <img src="assets/images/blog-3.webp" alt="Conservation rangers marching" loading="lazy" />
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>Community</span>
+                <time datetime="2026-06-10">Jun 10, 2026</time>
+              </div>
+              <h3>Meet the women guarding Kenya’s wildlife</h3>
+              <p>How community conservancies are rewriting conservation leadership across East Africa.</p>
+              <a href="404.html" class="link-arrow">Read article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partners section" id="partners">
+      <div class="container">
+        <div class="section__header section__header--center reveal-up">
+          <span class="section__eyebrow">Partners</span>
+          <h2 class="section__title">Trusted by global changemakers</h2>
+        </div>
+      </div>
+      <div class="partners__marquee" aria-label="Partner logos">
+        <div class="partners__track">
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">GreenLeaf</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">EcoBank</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">TerraFund</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Oceanic</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">WildTrust</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">RenewCo</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">GreenLeaf</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">EcoBank</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">TerraFund</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Oceanic</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">WildTrust</text></svg></div>
+          <div class="partner-logo"><svg viewBox="0 0 120 40"><text x="60" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">RenewCo</text></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay Connected -->
+    <section class="stay-connected section" id="newsletter">
+      <div class="container">
+        <div class="stay-connected__grid">
+          <div class="stay-connected__content reveal-up">
+            <span class="section__eyebrow">Stay Connected</span>
+            <h2 class="section__title">Join the movement for a greener future</h2>
+            <p class="stay-connected__text">Get restoration updates, impact reports, and ways to act—delivered monthly to your inbox.</p>
+            <div class="stay-connected__stats">
+              <div class="stay-connected__stat">
+                <strong>12,400+</strong>
+                <span>Subscribers</span>
+              </div>
+              <div class="stay-connected__stat">
+                <strong>4.9/5</strong>
+                <span>Reader Rating</span>
+              </div>
+            </div>
+          </div>
+          <div class="stay-connected__form-wrap reveal-up">
+            <form class="stay-connected__form" action="#" method="post" novalidate>
+              <label for="newsletter-email" class="visually-hidden">Email address</label>
+              <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn btn--primary">Subscribe</button>
+            </form>
+            <p class="stay-connected__disclaimer">No spam. Unsubscribe anytime. We respect your privacy.</p>
+            <div class="stay-connected__social">
+              <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+              <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.36 7.15 2.21 8.42 2.15 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.23.23 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.16 4.35 2.63 6.82 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.16 6.82-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.77 2.7 21.3.23 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+              <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="StacklyEarth Home">
+            <img src="assets/images/logo-stackly.webp" alt="StacklyEarth" class="footer__logo-icon" width="120" height="120" />
+          </a>
+          <p>Restoring ecosystems, protecting wildlife, and empowering communities through transparent, science-driven conservation.</p>
+          <div class="footer__social">
+            <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.07 4.7a4.28 4.28 0 0 0 1.32 5.71 4.25 4.25 0 0 1-1.94-.53v.05a4.29 4.29 0 0 0 3.43 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.59 8.59 0 0 1 2 19.54a12.12 12.12 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 6.56a8.6 8.6 0 0 1-2.54.7z"/></svg></a>
+            <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.36 7.15 2.21 8.42 2.15 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.23.23 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.16 4.35 2.63 6.82 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.16 6.82-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.77 2.7 21.3.23 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+            <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.2c0-2.8-1.6-4.1-3.7-4.1-1.7 0-2.5.9-2.9 1.6V9.5H9.5v9h3.4v-5.2c0-1.5.8-2.4 2-2.4s1.8.7 1.8 2.4v5.2h3.4M6.5 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1.7 10.2V9.5H4.8v9h3.4z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#impact">Impact Reports</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Causes</h4>
+          <ul>
+            <li><a href="404.html">Forest Restoration</a></li>
+            <li><a href="404.html">Ocean Conservation</a></li>
+            <li><a href="404.html">Wildlife Protection</a></li>
+            <li><a href="404.html">Climate Action</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Newsletter</h4>
+          <p>Get monthly restoration updates, impact stories, and ways to help — straight to your inbox.</p>
+          <form class="footer__form" action="#" method="post" novalidate>
+            <label for="footer-email" class="visually-hidden">Email address</label>
+            <input type="email" id="footer-email" name="email" placeholder="Your email" required />
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+          </form>
+          <p class="footer__newsletter-count"><strong>12,400+</strong> subscribers trust us</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 StacklyEarth. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

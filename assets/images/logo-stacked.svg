@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="160" height="140">
+  <defs>
+    <linearGradient id="sLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d6a56"/>
+      <stop offset="50%" stop-color="#1b4d3e"/>
+      <stop offset="100%" stop-color="#0f2e1f"/>
+    </linearGradient>
+    <linearGradient id="sVeinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8a46f"/>
+      <stop offset="100%" stop-color="#b08d5d"/>
+    </linearGradient>
+    <linearGradient id="sLeafSheen" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <filter id="sSoftShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0a1f15" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#sSoftShadow)">
+    <!-- Leaf icon (centered, ~60px) -->
+    <g transform="translate(50, 4) scale(0.9375)">
+      <path d="M32 6C22 14 10 24 10 36c0 10 9.8 18 22 18s22-8 22-18c0-10-12-20-22-30z" fill="url(#sLeafGrad)"/>
+      <path d="M32 6C22 14 10 24 10 36c0 10 9.8 18 22 18s22-8 22-18c0-10-12-20-22-30z" fill="url(#sLeafSheen)"/>
+      <path d="M32 54c0-16 6-24 14-30-6 4-14 10-14 30z" fill="rgba(15,46,31,0.3)"/>
+      <path d="M32 12C32 12 32 28 32 50" stroke="url(#sVeinGrad)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <path d="M32 22C26 26 20 30 17 34" stroke="url(#sVeinGrad)" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.45"/>
+      <path d="M32 30C38 33 43 36 46 39" stroke="url(#sVeinGrad)" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.45"/>
+      <path d="M32 38C27 40 22 43 19 46" stroke="url(#sVeinGrad)" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.35"/>
+    </g>
+    <!-- Wordmark centered below -->
+    <text x="80" y="92" text-anchor="middle" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#0f2e1f" letter-spacing="-0.5">Stackly</text>
+    <text x="80" y="118" text-anchor="middle" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="400" font-size="26" fill="#1b4d3e" letter-spacing="3" opacity="0.85">EARTH</text>
+    <!-- Gold accent line -->
+    <rect x="55" y="98" width="50" height="1.2" rx="0.6" fill="url(#sVeinGrad)" opacity="0.5"/>
+  </g>
+</svg>

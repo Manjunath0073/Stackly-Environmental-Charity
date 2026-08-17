@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" width="280" height="56">
+  <defs>
+    <linearGradient id="mLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d2d2d"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <filter id="mSoftShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <g filter="url(#mSoftShadow)">
+    <g transform="translate(4, 4) scale(0.625)">
+      <path d="M32 6C22 14 10 24 10 36c0 10 9.8 18 22 18s22-8 22-18c0-10-12-20-22-30z" fill="url(#mLeafGrad)"/>
+      <path d="M32 54c0-16 6-24 14-30-6 4-14 10-14 30z" fill="rgba(0,0,0,0.2)"/>
+      <path d="M32 12L32 50" stroke="#999" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+    </g>
+    <text x="54" y="37" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="700" font-size="28" fill="#1a1a1a" letter-spacing="-0.5">Stackly</text>
+    <text x="188" y="37" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-weight="400" font-size="28" fill="#333" letter-spacing="-0.5" opacity="0.8">Earth</text>
+    <rect x="54" y="42" width="198" height="1.2" rx="0.6" fill="#ccc" opacity="0.5"/>
+  </g>
+</svg>

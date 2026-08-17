@@ -1,0 +1,401 @@
+/* =====================================================
+   404 Error Page — StacklyEarth
+   Cinematic full-screen layout, floating particles,
+   immersive animations, premium navigation.
+   ===================================================== */
+
+/* =====================================================
+   FULL-SCREEN ERROR LAYOUT
+   ===================================================== */
+.error {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* =====================================================
+   BACKGROUND LAYERS
+   ===================================================== */
+.error__bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.error__bg-image {
+  position: absolute;
+  inset: 0;
+  background: url('../assets/images/about-hero.webp') center center / cover no-repeat;
+  transform: scale(1.08);
+  will-change: transform;
+  animation: bgZoom 30s ease-in-out infinite alternate;
+}
+
+@keyframes bgZoom {
+  0% { transform: scale(1.08); }
+  100% { transform: scale(1.15); }
+}
+
+.error__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 26, 18, 0.7) 0%,
+    rgba(15, 46, 31, 0.82) 40%,
+    rgba(10, 26, 18, 0.92) 100%
+  );
+}
+
+.error__bg-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* =====================================================
+   FLOATING PARTICLES CANVAS
+   ===================================================== */
+.error__particles {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+.error__content {
+  text-align: center;
+  max-width: 640px;
+  animation: errorFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+@keyframes errorFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================
+   ANIMATED LEAF ICON
+   ===================================================== */
+.error__icon {
+  margin-bottom: 1.5rem;
+}
+
+.error__leaf {
+  width: 72px;
+  height: 72px;
+  color: var(--color-accent);
+  animation: leafFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(200, 164, 111, 0.3));
+}
+
+@keyframes leafFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(3deg); }
+  75% { transform: translateY(4px) rotate(-2deg); }
+}
+
+/* =====================================================
+   ERROR CODE & TEXT
+   ===================================================== */
+.error__code {
+  font-family: var(--font-serif);
+  font-size: clamp(6rem, 18vw, 12rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.03em;
+  animation: codeReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+}
+
+@keyframes codeReveal {
+  from { opacity: 0; transform: scale(0.8) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.error__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  animation: textSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+}
+
+.error__message {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  animation: textSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
+}
+
+@keyframes textSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================
+   SEARCH BAR
+   ===================================================== */
+.error__search {
+  position: relative;
+  max-width: 440px;
+  margin: 0 auto 2.5rem;
+  animation: textSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+.error__search input {
+  width: 100%;
+  padding: 1rem 3.5rem 1rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  outline: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.error__search input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.error__search input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(200, 164, 111, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.error__search-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.error__search-btn:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.error__search-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-white);
+}
+
+/* =====================================================
+   ACTION BUTTONS
+   ===================================================== */
+.error__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  animation: textSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s both;
+}
+
+.error__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+}
+
+.error__btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.error__btn--light {
+  color: var(--color-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+}
+
+.error__btn--light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Primary button override for 404 */
+.error__btn.btn--primary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+  color: var(--color-white);
+  box-shadow: 0 8px 32px rgba(200, 164, 111, 0.35);
+}
+
+.error__btn.btn--primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(200, 164, 111, 0.5);
+}
+
+/* =====================================================
+   HELPFUL LINKS
+   ===================================================== */
+.error__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  animation: textSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s both;
+}
+
+.error__links-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.error__link {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all var(--transition);
+}
+
+.error__link:hover {
+  color: var(--color-white);
+  border-color: var(--color-accent);
+  background: rgba(200, 164, 111, 0.1);
+}
+
+/* =====================================================
+   SCROLL INDICATOR
+   ===================================================== */
+.error__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: textSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.4s both;
+}
+
+.error__scroll-text {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.error__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(200, 164, 111, 0.5), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.4; transform: scaleY(0.6); }
+}
+
+/* =====================================================
+   RESPONSIVE — Tablet
+   ===================================================== */
+@media (max-width: 1024px) {
+  .error__code {
+    font-size: clamp(5rem, 15vw, 9rem);
+  }
+
+  .error__leaf {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE — Mobile
+   ===================================================== */
+@media (max-width: 768px) {
+  .error {
+    padding: 1.5rem;
+  }
+
+  .error__code {
+    font-size: clamp(4rem, 20vw, 7rem);
+  }
+
+  .error__leaf {
+    width: 52px;
+    height: 52px;
+  }
+
+  .error__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error__btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .error__links {
+    gap: 0.5rem;
+  }
+
+  .error__link {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .error__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .error__search input {
+    font-size: 0.88rem;
+    padding: 0.85rem 3rem 0.85rem 1rem;
+  }
+}

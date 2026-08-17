@@ -1,0 +1,417 @@
+/* =====================================================
+   Get Involved Page — StacklyEarth
+   Engagement-focused layouts, donation tiers,
+   volunteer filtering, testimonials carousel, CTA.
+   ===================================================== */
+
+/* =====================================================
+   HEADER INNER
+   ===================================================== */
+.header--inner { background-color: rgba(15,46,31,0.95); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.header--inner .header__link { color: rgba(255,255,255,0.85); }
+.header--inner .header__link--active { color: var(--color-accent); }
+.header--inner .header__link--active::after { width: 100%; }
+.header--scrolled.header--inner { background-color: rgba(255,255,255,0.92); }
+.header--scrolled.header--inner .header__link { color: var(--color-text); }
+.header--scrolled.header--inner .header__link--active { color: var(--color-primary); }
+
+/* Reveal directions */
+.reveal-left, .reveal-right, .reveal-scale { opacity: 0; transition: opacity 0.7s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); will-change: opacity, transform; }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-scale { transform: scale(0.92); }
+.reveal-left.reveal--visible, .reveal-right.reveal--visible, .reveal-scale.reveal--visible { opacity: 1; transform: none; }
+.section__subtitle--light { color: rgba(255,255,255,0.75); }
+
+/* =====================================================
+    1. HERO — Engagement Centered
+    ===================================================== */
+.gii-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.gii-hero__bg {
+  position: absolute; inset: 0;
+  background: url('../assets/images/gii-hero.webp') center center / cover no-repeat;
+  transform: scale(1.05);
+  will-change: transform;
+}
+.gii-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 46, 31, 0.92) 0%,
+    rgba(15, 46, 31, 0.75) 50%,
+    rgba(15, 46, 31, 0.55) 100%
+  );
+  z-index: 1;
+}
+.gii-hero__shape {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+.gii-hero__shape--1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  background: var(--color-accent);
+  animation: giiShapeMove 12s ease-in-out infinite alternate;
+}
+.gii-hero__shape--2 {
+  width: 300px;
+  height: 300px;
+  bottom: -80px;
+  left: -80px;
+  background: var(--color-primary-light);
+  animation: giiShapeMove 15s ease-in-out infinite alternate-reverse;
+}
+.gii-hero__shape--3 {
+  width: 180px;
+  height: 180px;
+  top: 40%;
+  right: 15%;
+  background: rgba(200, 164, 111, 0.6);
+  animation: giiShapeMove 10s ease-in-out infinite alternate;
+}
+@keyframes giiShapeMove {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, 40px) scale(1.15); }
+}
+.gii-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.gii-hero__text {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+.gii-hero__breadcrumb {
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;
+}
+.gii-hero__breadcrumb a { transition: color var(--transition); }
+.gii-hero__breadcrumb a:hover { color: var(--color-accent); }
+.gii-hero__breadcrumb span[aria-hidden] { opacity: 0.5; }
+.gii-hero__title { font-size: 2.7rem; color: var(--color-white); margin-bottom: 1.25rem; line-height: 1.05; }
+.gii-hero__lead {
+  font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+  color: rgba(255,255,255,0.82); max-width: 580px; line-height: 1.75;
+  margin: 0 auto 2rem;
+}
+.gii-hero__actions {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+.gii-hero__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.gii-hero__actions .btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.btn--light { background: transparent; color: var(--color-white); border-color: rgba(255,255,255,0.4); }
+.btn--light:hover { background: rgba(255,255,255,0.15); }
+.gii-hero__badges {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gii-hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  min-width: 200px;
+  text-align: left;
+  transition: transform var(--transition), background var(--transition);
+}
+.gii-hero__badge:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+.gii-hero__badge-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(27, 77, 62, 0.6);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.gii-hero__badge-icon--accent {
+  background: rgba(200, 164, 111, 0.25);
+}
+.gii-hero__badge-icon--light {
+  background: rgba(255, 255, 255, 0.15);
+}
+.gii-hero__badge-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--color-white);
+}
+.gii-hero__badge strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.gii-hero__badge span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =====================================================
+   2. WAYS TO CONTRIBUTE
+   ===================================================== */
+.ways { background: var(--color-bg); }
+.ways__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; align-items: stretch; }
+.ways__card { background: var(--color-surface); border-radius: var(--radius-md); padding: 2rem 1.75rem; text-align: center; box-shadow: var(--shadow-sm); transition: transform var(--transition), box-shadow var(--transition); position: relative; overflow: hidden; display: flex; flex-direction: column; flex: 1; }
+.ways__card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+.ways__card--featured { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: var(--color-white); transform: scale(1.03); }
+.ways__card--featured:hover { transform: scale(1.03) translateY(-8px); }
+.ways__card-icon { width: 64px; height: 64px; border-radius: 50%; display: inline-grid; place-items: center; margin-bottom: 1.25rem; transition: transform var(--transition); }
+.ways__card:hover .ways__card-icon { transform: scale(1.1) rotateY(180deg); }
+.ways__card-icon--donate { background: rgba(200,164,111,0.12); }
+.ways__card-icon--donate svg { fill: var(--color-accent); }
+.ways__card-icon--volunteer { background: rgba(255,255,255,0.15); }
+.ways__card-icon--volunteer svg { fill: var(--color-white); }
+.ways__card-icon--partner { background: rgba(27,77,62,0.1); }
+.ways__card-icon--partner svg { fill: var(--color-primary); }
+.ways__card-icon--fundraise { background: rgba(200,164,111,0.12); }
+.ways__card-icon--fundraise svg { fill: var(--color-accent); }
+.ways__card-icon svg { width: 28px; height: 28px; }
+.ways__card h3 { font-size: 1.3rem; margin-bottom: 0.6rem; }
+.ways__card p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1; }
+.ways__card--featured p { color: rgba(255,255,255,0.8); }
+.ways__card .btn { width: 100%; margin-top: auto; }
+
+/* =====================================================
+   3. DONATION PLANS
+   ===================================================== */
+.donate { position: relative; overflow: hidden; }
+.donate__bg { position: absolute; inset: 0; background: url('../assets/images/gii-cta.webp') center center / cover no-repeat; }
+.donate__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,46,31,0.92), rgba(27,77,62,0.88)); }
+.donate .container { position: relative; z-index: 1; }
+.donate__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; align-items: stretch; }
+.donate__card { background: var(--color-surface); border-radius: var(--radius-md); padding: 2rem 1.5rem; text-align: center; box-shadow: var(--shadow-md); transition: transform var(--transition), box-shadow var(--transition); position: relative; display: flex; flex-direction: column; }
+.donate__card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+.donate__card--featured { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: var(--color-white); transform: scale(1.04); border: 2px solid var(--color-accent); }
+.donate__card--featured:hover { transform: scale(1.04) translateY(-8px); }
+.donate__badge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--color-accent); color: var(--color-white); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 1rem; border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+.donate__tier { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 0.75rem; }
+.donate__card--featured .donate__tier { color: rgba(255,255,255,0.7); }
+.donate__amount { font-family: var(--font-serif); font-size: 3rem; font-weight: 700; color: var(--color-primary); line-height: 1; margin-bottom: 0.75rem; }
+.donate__amount span { font-size: 1.5rem; vertical-align: top; }
+.donate__card--featured .donate__amount { color: var(--color-white); }
+.donate__amount--custom { font-size: 0; }
+.donate__amount--custom input { width: 100%; max-width: 160px; font-family: var(--font-serif); font-size: 2.7rem; font-weight: 700; color: var(--color-primary); text-align: center; border: none; border-bottom: 2px solid var(--color-accent); background: transparent; outline: none; padding: 0.25rem; }
+.donate__amount--custom input::placeholder { color: #ccc; }
+.donate__impact { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.55; margin-bottom: 1.25rem; }
+.donate__card--featured .donate__impact { color: rgba(255,255,255,0.8); }
+.donate__perks { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; text-align: left; flex: 1; }
+.donate__perks li { font-size: 0.82rem; color: var(--color-text-muted); display: flex; align-items: center; gap: 0.5rem; }
+.donate__card--featured .donate__perks li { color: rgba(255,255,255,0.75); }
+.donate__perks li::before { content: '✓'; color: var(--color-accent); font-weight: 700; }
+.donate__card--featured .donate__perks li::before { color: var(--color-white); }
+.donate__btn { width: 100%; margin-top: auto; }
+.donate__card--featured .btn--primary { background: var(--color-accent); }
+
+/* =====================================================
+   4. VOLUNTEER OPPORTUNITIES
+   ===================================================== */
+.volunteer { background: var(--color-bg-alt); }
+.volunteer__tabs { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.volunteer__tab { padding: 0.65rem 1.5rem; border-radius: 999px; font-size: 0.88rem; font-weight: 600; color: var(--color-text-muted); background: var(--color-surface); border: 1.5px solid transparent; transition: all var(--transition); cursor: pointer; }
+.volunteer__tab:hover { color: var(--color-primary); border-color: var(--color-primary); }
+.volunteer__tab--active { color: var(--color-white); background: var(--color-primary); border-color: var(--color-primary); }
+.volunteer__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; align-items: stretch; }
+.volunteer__card { background: var(--color-surface); border-radius: var(--radius-md); padding: 1.75rem; box-shadow: var(--shadow-sm); transition: transform var(--transition), box-shadow var(--transition), opacity 0.4s ease; display: flex; flex-direction: column; }
+.volunteer__card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.volunteer__card.hidden { opacity: 0; transform: scale(0.92); pointer-events: none; position: absolute; visibility: hidden; }
+.volunteer__card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.volunteer__card-type { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.65rem; border-radius: 999px; }
+.volunteer__card-type--onsite { background: rgba(27,77,62,0.1); color: var(--color-primary); }
+.volunteer__card-type--remote { background: rgba(200,164,111,0.12); color: var(--color-accent); }
+.volunteer__card-type--events { background: rgba(45,106,86,0.1); color: var(--color-primary-light); }
+.volunteer__card-location { display: flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; color: var(--color-text-muted); }
+.volunteer__card-location svg { width: 14px; height: 14px; fill: currentColor; }
+.volunteer__card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.volunteer__card p { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.55; margin-bottom: 1rem; flex: 1; }
+.volunteer__card-meta { display: flex; gap: 1rem; margin-bottom: 1.25rem; }
+.volunteer__card-meta span { font-size: 0.75rem; color: var(--color-text-muted); display: flex; align-items: center; gap: 0.3rem; }
+.volunteer__card-meta span::before { content: '•'; color: var(--color-accent); }
+.btn--small { padding: 0.55rem 1.25rem; font-size: 0.82rem; }
+
+.volunteer__card .btn { margin-top: auto; }
+
+/* =====================================================
+   5. FUNDRAISING
+   ===================================================== */
+.fundraise { background: var(--color-bg); }
+.fundraise__steps { display: flex; align-items: flex-start; justify-content: center; gap: 0; margin-bottom: 4rem; }
+.fundraise__step { text-align: center; flex: 1; max-width: 280px; padding: 0 1rem; }
+.fundraise__step-num { font-family: var(--font-serif); font-size: 2.7rem; font-weight: 700; color: var(--color-accent); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem; }
+.fundraise__step-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--color-surface); border: 2px solid var(--color-accent); display: inline-grid; place-items: center; margin-bottom: 1rem; transition: background var(--transition), transform var(--transition); }
+.fundraise__step:hover .fundraise__step-icon { background: var(--color-primary); transform: scale(1.1); }
+.fundraise__step-icon svg { width: 28px; height: 28px; fill: var(--color-primary); transition: fill var(--transition); }
+.fundraise__step:hover .fundraise__step-icon svg { fill: var(--color-white); }
+.fundraise__step h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+.fundraise__step p { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.55; }
+.fundraise__connector { width: 80px; flex-shrink: 0; padding-top: 2rem; }
+.fundraise__connector svg { width: 100%; height: 20px; }
+.fundraise__examples { margin-bottom: 3rem; }
+.fundraise__examples-title { font-size: 1.3rem; text-align: center; margin-bottom: 1.5rem; }
+.fundraise__examples-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+.fundraise__example { background: var(--color-surface); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform var(--transition), box-shadow var(--transition); }
+.fundraise__example:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.fundraise__example img { width: 100%; height: 160px; object-fit: cover; }
+.fundraise__example-body { padding: 1.25rem; }
+.fundraise__example-raised { display: inline-block; font-size: 0.72rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+.fundraise__example-body h4 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+.fundraise__example-body p { font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 0.75rem; }
+.fundraise__example-bar { height: 5px; background: #e2e2e2; border-radius: 999px; overflow: hidden; }
+.fundraise__example-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); border-radius: 999px; transition: width 1.4s cubic-bezier(0.22,1,0.36,1); }
+.fundraise__cta { text-align: center; }
+
+/* =====================================================
+   6. CORPORATE PARTNERSHIPS
+   ===================================================== */
+.partner { background: var(--color-bg-alt); }
+.partner__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.partner__text { color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; margin: 1rem 0 2rem; }
+.partner__benefits { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem; }
+.partner__benefit { display: flex; gap: 1rem; align-items: flex-start; }
+.partner__benefit svg { width: 24px; height: 24px; fill: var(--color-primary); flex-shrink: 0; margin-top: 0.15rem; }
+.partner__benefit strong { display: block; font-size: 0.95rem; margin-bottom: 0.15rem; }
+.partner__benefit p { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin: 0; }
+.partner__visual { position: relative; }
+.partner__visual img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.partner__logos { position: absolute; bottom: -1.5rem; left: 1.5rem; right: 1.5rem; padding: 1.25rem; border-radius: var(--radius-md); color: var(--color-white); }
+.partner__logos-label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem; }
+.partner__logos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+.partner__logos-grid span { font-size: 0.78rem; font-weight: 600; opacity: 0.85; text-align: center; padding: 0.3rem; background: rgba(255,255,255,0.08); border-radius: var(--radius-sm); }
+
+/* =====================================================
+   7. COMMUNITY STORIES
+   ===================================================== */
+.stories { background: var(--color-bg); }
+.stories__slider { position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; }
+.stories__track { display: flex; transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94); }
+.stories__card { flex: 0 0 100%; padding: 2.5rem; border-radius: var(--radius-lg); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: var(--color-white); }
+.stories__quote { font-family: var(--font-serif); font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.6; margin-bottom: 1.75rem; font-style: italic; color: var(--color-white); }
+.stories__author { display: flex; align-items: center; gap: 1rem; }
+.stories__avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--gradient); display: grid; place-items: center; flex-shrink: 0; }
+.stories__avatar span { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--color-white); }
+.stories__author strong { display: block; font-size: 0.95rem; }
+.stories__author span { font-size: 0.82rem; opacity: 0.7; }
+.stories__controls { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+.stories__btn { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--color-primary); color: var(--color-primary); display: grid; place-items: center; transition: background var(--transition), color var(--transition), transform var(--transition); background: var(--color-surface); }
+.stories__btn:hover { background: var(--color-primary); color: var(--color-white); transform: scale(1.08); }
+.stories__btn svg { width: 22px; height: 22px; fill: currentColor; }
+.stories__dots { display: flex; gap: 0.5rem; }
+.stories__dots button { width: 10px; height: 10px; border-radius: 50%; background: var(--color-text-muted); opacity: 0.3; border: none; cursor: pointer; transition: opacity var(--transition), transform var(--transition), background var(--transition); }
+.stories__dots button.active { opacity: 1; background: var(--color-primary); transform: scale(1.25); }
+
+/* =====================================================
+   8. FINAL CTA
+   ===================================================== */
+.gii-cta { position: relative; overflow: hidden; }
+.gii-cta__bg { position: absolute; inset: 0; background: url('../assets/images/gii-hero.webp') center center / cover no-repeat; transform: scale(1.05); will-change: transform; }
+.gii-cta__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,46,31,0.92), rgba(27,77,62,0.88), rgba(15,46,31,0.94)); z-index: 1; }
+.gii-cta__content { position: relative; z-index: 2; text-align: center; padding: 5rem 0; max-width: 750px; margin: 0 auto; }
+.gii-cta__eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1rem; padding: 0.35rem 0.9rem; border: 1px solid rgba(200,164,111,0.45); border-radius: 999px; background: rgba(255,255,255,0.05); }
+.gii-cta__title { font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--color-white); margin-bottom: 1.25rem; line-height: 1.15; }
+.gii-cta__lead { font-size: clamp(1rem, 1.6vw, 1.2rem); color: rgba(255,255,255,0.85); margin-bottom: 2.5rem; line-height: 1.7; }
+.gii-cta__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+.gii-cta__trust { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+.gii-cta__badge { display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.25rem; border-radius: var(--radius-md); color: var(--color-white); }
+.gii-cta__badge svg { width: 22px; height: 22px; fill: var(--color-accent); flex-shrink: 0; }
+.gii-cta__badge strong { display: block; font-size: 0.88rem; }
+.gii-cta__badge span { font-size: 0.75rem; opacity: 0.7; }
+
+/* =====================================================
+   RESPONSIVE — Tablet
+   ===================================================== */
+@media (max-width: 1024px) {
+  .gii-hero { min-height: auto; }
+  .gii-hero__content { padding-bottom: 5rem; }
+  .gii-hero__badges { gap: 0.75rem; }
+  .gii-hero__badge { min-width: 180px; }
+  .ways__grid { grid-template-columns: repeat(2, 1fr); }
+  .ways__card--featured { transform: none; }
+  .ways__card--featured:hover { transform: translateY(-8px); }
+  .donate__grid { grid-template-columns: repeat(2, 1fr); }
+  .donate__card--featured { transform: none; }
+  .donate__card--featured:hover { transform: translateY(-8px); }
+  .volunteer__grid { grid-template-columns: repeat(2, 1fr); }
+  .fundraise__steps { flex-direction: column; align-items: center; gap: 1.5rem; }
+  .fundraise__connector { display: none; }
+  .fundraise__examples-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+  .partner__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .partner__visual { order: -1; }
+  .partner__logos { position: static; margin-top: 1rem; }
+  .gii-cta__trust { gap: 1rem; }
+}
+
+/* =====================================================
+   RESPONSIVE — Mobile
+   ===================================================== */
+@media (max-width: 768px) {
+  .gii-hero__content { padding-top: 7rem; padding-bottom: 4rem; }
+  .gii-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gii-hero__actions .btn { width: 100%; max-width: none; justify-content: center; }
+  .gii-hero__badges {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+  }
+  .gii-hero__badge {
+    width: 100%;
+    min-width: auto;
+  }
+  .ways__grid { grid-template-columns: 1fr; }
+  .donate__grid { grid-template-columns: 1fr; }
+  .volunteer__tabs { gap: 0.35rem; }
+  .volunteer__tab { padding: 0.55rem 1rem; font-size: 0.82rem; }
+  .volunteer__grid { grid-template-columns: 1fr; }
+  .fundraise__examples-grid { grid-template-columns: 1fr; }
+  .gii-cta__actions { flex-direction: column; align-items: center; }
+  .gii-cta__actions .btn { width: 100%; max-width: 280px; }
+  .gii-cta__content { padding: 3rem 0; }
+  .gii-cta__trust { flex-direction: column; align-items: center; }
+  .stories__card { padding: 1.75rem; }
+}

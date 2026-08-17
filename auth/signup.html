@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Create your StacklyEarth account to start tracking your environmental impact, joining volunteer programs, and supporting restoration projects." />
+  <title>Sign Up | StacklyEarth</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+  <div class="auth">
+    <!-- Left Visual Panel -->
+    <div class="auth__visual">
+      <div class="auth__visual-bg" style="background-image: url('../assets/images/cause-forest.webp')"></div>
+      <div class="auth__visual-overlay"></div>
+
+      <a href="../index.html" class="auth__go-home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Go Home</span>
+      </a>
+
+      <div class="auth__visual-content">
+        <a href="../index.html" class="auth__logo" aria-label="StacklyEarth Home">
+          <img src="../assets/images/logo-stackly.webp" alt="StacklyEarth" class="auth__logo-icon" width="120" height="120" />
+        </a>
+        <h2 class="auth__visual-tagline">Join 15,000+ changemakers</h2>
+        <p class="auth__visual-text">Create your account and become part of a global movement restoring forests, protecting oceans, and safeguarding wildlife.</p>
+
+        <div class="auth__visual-stats">
+          <div class="auth__visual-stat">
+            <strong>1.2M+</strong>
+            <span>Trees Planted</span>
+          </div>
+          <div class="auth__visual-stat">
+            <strong>48</strong>
+            <span>Countries</span>
+          </div>
+          <div class="auth__visual-stat">
+            <strong>8,500+</strong>
+            <span>Volunteers</span>
+          </div>
+        </div>
+
+        <div class="auth__visual-features">
+          <div class="auth__visual-feature">
+            <div class="auth__visual-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V8M12 8C12 8 8 4 4 8c4 0 8 4 8 4z"/></svg>
+            </div>
+            <div class="auth__visual-feature-text">
+              <strong>Plant Trees</strong>
+              <span>Fund native tree restoration worldwide</span>
+            </div>
+          </div>
+          <div class="auth__visual-feature">
+            <div class="auth__visual-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l2-6M16 12l-2-6M8 12h8"/></svg>
+            </div>
+            <div class="auth__visual-feature-text">
+              <strong>Track Impact</strong>
+              <span>See your real-time environmental contribution</span>
+            </div>
+          </div>
+          <div class="auth__visual-feature">
+            <div class="auth__visual-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="auth__visual-feature-text">
+              <strong>Join Community</strong>
+              <span>Connect with changemakers across 48 countries</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Form Panel -->
+    <div class="auth__form-panel">
+      <div class="auth__card">
+        <div class="auth__card-header">
+          <h1 class="auth__card-title">Create Account</h1>
+          <p class="auth__card-subtitle">Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+
+        <div class="auth__success" id="signup-success">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <div>
+            <strong>Account created!</strong>
+            <span>Welcome to StacklyEarth. Redirecting you...</span>
+          </div>
+        </div>
+
+        <form class="auth__form" id="signup-form" novalidate>
+          <!-- Role Selection -->
+          <div class="auth__field">
+            <label>I want to</label>
+            <div class="auth__roles">
+              <div class="auth__role">
+                <input type="radio" id="role-guardian" name="role" value="guardian" checked />
+                <label for="role-guardian" class="auth__role-label">
+                  <span class="auth__role-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                  </span>
+                  <span class="auth__role-name">Guardian</span>
+                  <span class="auth__role-desc">Protect & fund restoration</span>
+                </label>
+              </div>
+              <div class="auth__role">
+                <input type="radio" id="role-champion" name="role" value="champion" />
+                <label for="role-champion" class="auth__role-label">
+                  <span class="auth__role-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  </span>
+                  <span class="auth__role-name">Champion</span>
+                  <span class="auth__role-desc">Volunteer in the field</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="auth__field">
+            <label for="signup-name">Full Name <span aria-hidden="true">*</span></label>
+            <div class="auth__input-wrap">
+              <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required autocomplete="name" />
+            </div>
+            <span class="auth__error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth__field">
+            <label for="signup-email">Email Address <span aria-hidden="true">*</span></label>
+            <div class="auth__input-wrap">
+              <input type="email" id="signup-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+            </div>
+            <span class="auth__error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth__field">
+            <label for="signup-phone">Phone Number</label>
+            <div class="auth__input-wrap">
+              <input type="tel" id="signup-phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" />
+            </div>
+            <span class="auth__error" aria-live="polite"></span>
+          </div>
+
+          <div class="auth__field">
+            <label for="signup-password">Password <span aria-hidden="true">*</span></label>
+            <div class="auth__input-wrap auth__input-wrap--password">
+              <input type="password" id="signup-password" name="password" placeholder="Create a strong password" required autocomplete="new-password" />
+              <button type="button" class="auth__toggle-pw" aria-label="Toggle password visibility" data-target="signup-password">
+                <svg class="auth__eye-open" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                <svg class="auth__eye-closed" viewBox="0 0 24 24" style="display:none"><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46A11.804 11.804 0 0 0 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2z"/></svg>
+              </button>
+            </div>
+            <span class="auth__error" aria-live="polite"></span>
+
+            <!-- Password Strength -->
+            <div class="auth__strength" id="password-strength" style="display:none">
+              <div class="auth__strength-bar">
+                <div class="auth__strength-fill" id="strength-fill"></div>
+              </div>
+              <span class="auth__strength-text" id="strength-text"></span>
+              <div class="auth__checklist">
+                <span class="auth__check" data-check="upper">
+                  <span class="auth__check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                  Uppercase
+                </span>
+                <span class="auth__check" data-check="lower">
+                  <span class="auth__check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                  Lowercase
+                </span>
+                <span class="auth__check" data-check="number">
+                  <span class="auth__check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                  Number
+                </span>
+                <span class="auth__check" data-check="special">
+                  <span class="auth__check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                  Special char
+                </span>
+                <span class="auth__check" data-check="length">
+                  <span class="auth__check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                  8+ chars
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="auth__field">
+            <label for="signup-confirm">Confirm Password <span aria-hidden="true">*</span></label>
+            <div class="auth__input-wrap auth__input-wrap--password">
+              <input type="password" id="signup-confirm" name="confirm_password" placeholder="Re-enter your password" required autocomplete="new-password" />
+              <button type="button" class="auth__toggle-pw" aria-label="Toggle password visibility" data-target="signup-confirm">
+                <svg class="auth__eye-open" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                <svg class="auth__eye-closed" viewBox="0 0 24 24" style="display:none"><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46A11.804 11.804 0 0 0 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2z"/></svg>
+              </button>
+            </div>
+            <span class="auth__error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary auth__submit">
+            <span class="auth__submit-text">Create Account</span>
+            <span class="auth__submit-loading" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8A5.87 5.87 0 0 1 6 12c0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/></svg>
+            </span>
+          </button>
+        </form>
+
+        <p class="auth__footer">
+          By creating an account, you agree to our <a href="../404.html">Terms of Service</a> and <a href="../404.html">Privacy Policy</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
