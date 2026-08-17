@@ -378,7 +378,7 @@
             <h2 class="dash__section-title">Welcome back, ${userData.name || 'Guardian'}</h2>
             <p class="dash__section-subtitle">Here's your environmental impact overview</p>
           </div>
-          <button class="dash__btn dash__btn--primary" onclick="window.location.href='../index.html#donate'">
+          <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             New Donation
           </button>
@@ -494,7 +494,7 @@
             <h2 class="dash__section-title">My Donations</h2>
             <p class="dash__section-subtitle">Track all your contributions and their impact</p>
           </div>
-          <button class="dash__btn dash__btn--primary" onclick="window.location.href='../index.html#donate'">
+          <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             New Donation
           </button>
@@ -769,7 +769,7 @@
             <h2 class="dash__section-title">Reports & Analytics</h2>
             <p class="dash__section-subtitle">Detailed insights into your environmental impact</p>
           </div>
-          <button class="dash__btn dash__btn--outline">
+          <button class="dash__btn dash__btn--outline" onclick="window.location.href='404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Export Report
           </button>
@@ -989,7 +989,7 @@
               <label class="dash__form-label">Phone Number</label>
               <input type="tel" class="dash__form-input" value="+1 (555) 123-4567" placeholder="Enter your phone" />
             </div>
-            <button class="dash__btn dash__btn--primary">Save Changes</button>
+            <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">Save Changes</button>
           </div>
 
           <div class="dash__card">
@@ -1008,7 +1008,7 @@
               <label class="dash__form-label">Confirm Password</label>
               <input type="password" class="dash__form-input" placeholder="Confirm new password" />
             </div>
-            <button class="dash__btn dash__btn--primary">Update Password</button>
+            <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">Update Password</button>
           </div>
         </div>
 
