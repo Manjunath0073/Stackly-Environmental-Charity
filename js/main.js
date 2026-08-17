@@ -182,6 +182,7 @@
 
   /* ---------- Simple form feedback ---------- */
   document.querySelectorAll('form').forEach((form) => {
+    if (form.classList.contains('auth__form')) return;
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       if (!form.checkValidity()) return;

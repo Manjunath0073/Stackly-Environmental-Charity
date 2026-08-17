@@ -227,9 +227,15 @@ p {
 }
 
 .btn--primary:hover {
-  background: var(--color-primary-dark);
-  box-shadow: 0 4px 16px rgba(27, 77, 62, 0.35);
-  transform: translateY(-1px);
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  box-shadow: 0 6px 20px rgba(200, 164, 111, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn--primary:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 8px rgba(200, 164, 111, 0.3);
 }
 
 .btn--secondary {
@@ -241,7 +247,12 @@ p {
 .btn--secondary:hover {
   background: var(--color-primary);
   color: var(--color-white);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(27, 77, 62, 0.3);
+}
+
+.btn--secondary:active {
+  transform: translateY(0) scale(0.97);
 }
 
 .btn--outline {
@@ -253,7 +264,11 @@ p {
 .btn--outline:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: var(--color-white);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+}
+
+.btn--outline:active {
+  transform: translateY(0) scale(0.97);
 }
 
 .btn--light {
@@ -264,7 +279,11 @@ p {
 
 .btn--light:hover {
   background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+}
+
+.btn--light:active {
+  transform: translateY(0) scale(0.97);
 }
 
 .btn--ghost {
@@ -742,17 +761,25 @@ p {
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: rgba(255, 255, 255, 0.4);
-  transition: color var(--transition), transform var(--transition);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.45);
+  transition: color var(--transition), transform var(--transition), background var(--transition);
 }
 
 .mobnav__link-arrow svg {
   width: 16px;
   height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .mobnav__link:hover .mobnav__link-arrow {
   color: var(--color-accent);
+  background: rgba(200, 164, 111, 0.12);
   transform: translateX(4px);
 }
 

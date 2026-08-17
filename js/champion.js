@@ -9,11 +9,12 @@
   /* ============================================================
      DUMMY DATA
      ============================================================ */
-  const userData = JSON.parse(localStorage.getItem('stackly_user')) || {
-    name: 'Champion',
-    email: 'champion@stacklyearth.org',
-    role: 'champion'
-  };
+  var stored = JSON.parse(localStorage.getItem('stackly_user'));
+  if (!stored || stored.role !== 'champion') {
+    window.location.href = '../auth/login.html';
+    return;
+  }
+  const userData = stored;
 
   const activities = [
     { id: 1, title: 'Tree Planting Drive', date: '2026-08-10', duration: 6, location: 'Costa Rica', type: 'planting', status: 'completed', treesPlanted: 120 },

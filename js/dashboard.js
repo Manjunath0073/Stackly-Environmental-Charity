@@ -9,11 +9,12 @@
   /* ============================================================
      DUMMY DATA
      ============================================================ */
-  const userData = JSON.parse(localStorage.getItem('stackly_user')) || {
-    name: 'Guardian',
-    email: 'guardian@stacklyearth.org',
-    role: 'guardian'
-  };
+  var stored = JSON.parse(localStorage.getItem('stackly_user'));
+  if (!stored || stored.role !== 'guardian') {
+    window.location.href = '../auth/login.html';
+    return;
+  }
+  const userData = stored;
 
   const donations = [
     { id: 1, date: '2026-08-10', amount: 250, project: 'Amazon Reforestation', status: 'completed', category: 'Forest' },

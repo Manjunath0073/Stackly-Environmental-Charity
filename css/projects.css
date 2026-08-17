@@ -50,9 +50,13 @@ body, main, .container {
 }
 .proj-hero__bg {
   position: absolute; inset: 0;
-  background: url('../assets/images/proj-hero.webp') center center / cover no-repeat;
   transform: scale(1.05);
   will-change: transform;
+}
+.proj-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .proj-hero__overlay {
   position: absolute; inset: 0;
@@ -428,7 +432,11 @@ body, main, .container {
 }
 .deepdive__bg {
   position: absolute; inset: 0;
-  background: url('../assets/images/proj-deepdive.webp') center center / cover no-repeat;
+}
+.deepdive__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .deepdive__overlay {
   position: absolute; inset: 0;
@@ -752,8 +760,12 @@ body, main, .container {
 .gmap { position: relative; overflow: hidden; }
 .gmap__bg {
   position: absolute; inset: 0;
-  background: url('../assets/images/proj-map-bg.webp') center center / cover no-repeat;
   transform: scale(1.05);
+}
+.gmap__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .gmap__overlay {
   position: absolute; inset: 0;
@@ -904,8 +916,12 @@ body, main, .container {
 .proj-cta { position: relative; overflow: hidden; }
 .proj-cta__bg {
   position: absolute; inset: 0;
-  background: url('../assets/images/proj-cta.webp') center center / cover no-repeat;
   transform: scale(1.05); will-change: transform;
+}
+.proj-cta__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .proj-cta__overlay {
   position: absolute; inset: 0;

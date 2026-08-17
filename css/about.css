@@ -82,9 +82,13 @@
 .about-hero__bg {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/about-hero.webp') center center / cover no-repeat;
   transform: scale(1.05);
   will-change: transform;
+}
+.about-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-hero__overlay {
@@ -254,8 +258,12 @@
 .journey__bg {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/about-team-bg.webp') center center / cover no-repeat;
   transform: scale(1.05);
+}
+.journey__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .journey__overlay {
@@ -693,7 +701,11 @@
 .impact__bg {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/about-values.webp') center center / cover no-repeat;
+}
+.impact__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .impact__overlay {
@@ -727,7 +739,7 @@
 }
 
 .impact__item--offset {
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 .impact__ring {
@@ -893,8 +905,12 @@
 .process__bg {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/about-approach.webp') center center / cover no-repeat;
   transform: scale(1.05);
+}
+.process__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .process__overlay {
@@ -1183,9 +1199,13 @@
 .about-cta__bg {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/about-cta.webp') center center / cover no-repeat;
   transform: scale(1.05);
   will-change: transform;
+}
+.about-cta__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-cta__overlay {
@@ -1282,14 +1302,22 @@
     justify-content: center;
   }
 
+  .about-hero__visual {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .about-hero__image img {
     max-width: 420px;
     aspect-ratio: 16 / 10;
   }
 
   .about-hero__floating-card {
-    left: 1rem;
-    bottom: -1rem;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: -2rem auto 0;
+    max-width: 100%;
   }
 
   .journey__item {
@@ -1482,12 +1510,11 @@
   }
 
   .process__step-dot {
-    width: 44px;
-    height: 44px;
+    display: none;
   }
 
-  .process__step-number {
-    font-size: 0.85rem;
+  .process__step-ring {
+    display: none;
   }
 
   .process__step-ring {
@@ -1535,5 +1562,29 @@
   .about-cta__actions .btn {
     width: 100%;
     max-width: 280px;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE — Small Mobile
+   ===================================================== */
+@media (max-width: 480px) {
+  .about-hero__content {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    gap: 2rem;
+  }
+
+  .about-hero__title {
+    font-size: 2rem;
+  }
+
+  .about-hero__image img {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .about-hero__floating-card {
+    max-width: 100%;
   }
 }

@@ -266,12 +266,12 @@
         setTimeout(function () {
           window.location.href = dashboardUrl;
         }, 3000);
-      }, 1500);
+      }, 500);
     });
   }
 
   /* ============================================================
-     SIGNUP FORM
+      SIGNUP FORM
      ============================================================ */
   var signupForm = document.getElementById('signup-form');
   var signupName = document.getElementById('signup-name');
@@ -382,15 +382,12 @@
         setTimeout(function () {
           window.location.href = dashboardUrl;
         }, 3000);
-        setTimeout(function () {
-          window.location.href = '../dashboard/guardian.html';
-        }, 3000);
-      }, 1500);
+      }, 500);
     });
   }
 
   /* ============================================================
-     VISUAL PANEL PARALLAX
+      VISUAL PANEL PARALLAX
      ============================================================ */
   var visualBg = document.querySelector('.auth__visual-bg');
   var tick = false;

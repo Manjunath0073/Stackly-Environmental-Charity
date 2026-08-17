@@ -35,9 +35,13 @@
 }
 .gii-hero__bg {
   position: absolute; inset: 0;
-  background: url('../assets/images/gii-hero.webp') center center / cover no-repeat;
   transform: scale(1.05);
   will-change: transform;
+}
+.gii-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .gii-hero__overlay {
   position: absolute; inset: 0;
@@ -215,7 +219,8 @@
    3. DONATION PLANS
    ===================================================== */
 .donate { position: relative; overflow: hidden; }
-.donate__bg { position: absolute; inset: 0; background: url('../assets/images/gii-cta.webp') center center / cover no-repeat; }
+.donate__bg { position: absolute; inset: 0; }
+.donate__bg img { width: 100%; height: 100%; object-fit: cover; }
 .donate__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,46,31,0.92), rgba(27,77,62,0.88)); }
 .donate .container { position: relative; z-index: 1; }
 .donate__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; align-items: stretch; }
@@ -312,10 +317,10 @@
 .partner__benefit p { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin: 0; }
 .partner__visual { position: relative; }
 .partner__visual img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
-.partner__logos { position: absolute; bottom: -1.5rem; left: 1.5rem; right: 1.5rem; padding: 1.25rem; border-radius: var(--radius-md); color: var(--color-white); }
-.partner__logos-label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.5rem; }
+.partner__logos { position: absolute; bottom: -1.5rem; left: 1.5rem; right: 1.5rem; padding: 1.25rem; border-radius: var(--radius-md); color: var(--color-white); background: rgba(27, 77, 62, 0.92); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18); }
+.partner__logos-label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.7); margin-bottom: 0.5rem; }
 .partner__logos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-.partner__logos-grid span { font-size: 0.78rem; font-weight: 600; opacity: 0.85; text-align: center; padding: 0.3rem; background: rgba(255,255,255,0.08); border-radius: var(--radius-sm); }
+.partner__logos-grid span { font-size: 0.78rem; font-weight: 600; color: rgba(255, 255, 255, 0.9); text-align: center; padding: 0.3rem; background: rgba(255,255,255,0.1); border-radius: var(--radius-sm); }
 
 /* =====================================================
    7. COMMUNITY STORIES
@@ -342,7 +347,8 @@
    8. FINAL CTA
    ===================================================== */
 .gii-cta { position: relative; overflow: hidden; }
-.gii-cta__bg { position: absolute; inset: 0; background: url('../assets/images/gii-hero.webp') center center / cover no-repeat; transform: scale(1.05); will-change: transform; }
+.gii-cta__bg { position: absolute; inset: 0; transform: scale(1.05); will-change: transform; }
+.gii-cta__bg img { width: 100%; height: 100%; object-fit: cover; }
 .gii-cta__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,46,31,0.92), rgba(27,77,62,0.88), rgba(15,46,31,0.94)); z-index: 1; }
 .gii-cta__content { position: relative; z-index: 2; text-align: center; padding: 5rem 0; max-width: 750px; margin: 0 auto; }
 .gii-cta__eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1rem; padding: 0.35rem 0.9rem; border: 1px solid rgba(200,164,111,0.45); border-radius: 999px; background: rgba(255,255,255,0.05); }
