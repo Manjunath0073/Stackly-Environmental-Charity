@@ -289,12 +289,13 @@
     const height = canvas.offsetHeight;
     const centerX = width / 2;
     const centerY = height / 2;
-    const radius = Math.min(width, height) / 2 - 20;
+    const radius = Math.min(width, height) / 2 - 40;
     const total = Object.values(data).reduce((a, b) => a + b, 0);
     let startAngle = -Math.PI / 2;
 
     ctx.clearRect(0, 0, width, height);
 
+    /* Draw slices */
     Object.entries(data).forEach(([key, val], i) => {
       const sliceAngle = (val / total) * Math.PI * 2;
       const endAngle = startAngle + sliceAngle;
@@ -306,19 +307,10 @@
       ctx.fillStyle = colors[i % colors.length];
       ctx.fill();
 
-      const midAngle = startAngle + sliceAngle / 2;
-      const labelX = centerX + Math.cos(midAngle) * (radius * 0.65);
-      const labelY = centerY + Math.sin(midAngle) * (radius * 0.65);
-      ctx.fillStyle = 'white';
-      ctx.font = 'bold 11px Inter';
-      ctx.textAlign = 'center';
-      ctx.fillText(key, labelX, labelY - 6);
-      ctx.font = '10px Inter';
-      ctx.fillText(Math.round(val / total * 100) + '%', labelX, labelY + 8);
-
       startAngle = endAngle;
     });
 
+    /* Center hole */
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius * 0.5, 0, Math.PI * 2);
     ctx.fillStyle = '#0f1f35';
@@ -326,7 +318,35 @@
     ctx.fillStyle = 'rgba(255,255,255,0.7)';
     ctx.font = 'bold 14px Inter';
     ctx.textAlign = 'center';
-    ctx.fillText('100%', centerX, centerY + 5);
+    ctx.textBaseline = 'middle';
+    ctx.fillText('100%', centerX, centerY);
+
+    /* Legend below the chart - 2 rows */
+    const keys = Object.keys(data);
+    const vals = Object.values(data);
+    const row1Y = centerY + radius + 12;
+    const row2Y = row1Y + 16;
+    const col1X = centerX - 70;
+    const col2X = centerX + 20;
+
+    keys.forEach((key, i) => {
+      const pct = Math.round(vals[i] / total * 100);
+      const row = i < 2 ? 0 : 1;
+      const col = i % 2;
+      const lx = col === 0 ? col1X : col2X;
+      const ly = row === 0 ? row1Y : row2Y;
+
+      ctx.beginPath();
+      ctx.arc(lx, ly, 4, 0, Math.PI * 2);
+      ctx.fillStyle = colors[i % colors.length];
+      ctx.fill();
+
+      ctx.fillStyle = 'rgba(255,255,255,0.8)';
+      ctx.font = '10px Inter';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(key + ' ' + pct + '%', lx + 8, ly);
+    });
   }
 
   function drawProgressCircle(svg, percent, color = '#c8a46f') {
@@ -367,7 +387,7 @@
             <h2 class="dash__section-title">Welcome back, ${userData.name || 'Champion'}</h2>
             <p class="dash__section-subtitle">Your volunteer journey continues — here's your impact</p>
           </div>
-          <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">
+          <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             Join Event
           </button>
@@ -578,7 +598,7 @@
             <h2 class="dash__section-title">Events & Campaigns</h2>
             <p class="dash__section-subtitle">Discover and join upcoming volunteer events</p>
           </div>
-          <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">
+          <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             Browse All Events
           </button>
@@ -614,7 +634,7 @@
                     </div>
                   </div>
                 </div>
-                ${e.status === 'upcoming' ? `<button class="dash__btn dash__btn--primary" style="width: 100%; justify-content: center;" onclick="window.location.href='404.html'">Join Event</button>` : `<button class="dash__btn dash__btn--outline" style="width: 100%; justify-content: center;" onclick="window.location.href='404.html'">View Details</button>`}
+                ${e.status === 'upcoming' ? `<button class="dash__btn dash__btn--primary" style="width: 100%; justify-content: center;" onclick="window.location.href='../404.html'">Join Event</button>` : `<button class="dash__btn dash__btn--outline" style="width: 100%; justify-content: center;" onclick="window.location.href='../404.html'">View Details</button>`}
               </div>
             </div>
           `).join('')}
@@ -959,7 +979,7 @@
               <label class="dash__form-label">Skills</label>
               <input type="text" class="dash__form-input" value="Tree Planting, Beach Cleanup, Wildlife Monitoring" placeholder="Enter your skills" />
             </div>
-            <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">Save Changes</button>
+            <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">Save Changes</button>
           </div>
 
           <div class="dash__card">
@@ -978,7 +998,7 @@
               <label class="dash__form-label">Confirm Password</label>
               <input type="password" class="dash__form-input" placeholder="Confirm new password" />
             </div>
-            <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">Update Password</button>
+            <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">Update Password</button>
           </div>
         </div>
 

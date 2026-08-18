@@ -295,12 +295,13 @@
     const height = canvas.offsetHeight;
     const centerX = width / 2;
     const centerY = height / 2;
-    const radius = Math.min(width, height) / 2 - 20;
+    const radius = Math.min(width, height) / 2 - 40;
     const total = Object.values(data).reduce((a, b) => a + b, 0);
     let startAngle = -Math.PI / 2;
 
     ctx.clearRect(0, 0, width, height);
 
+    /* Draw slices */
     Object.entries(data).forEach(([key, val], i) => {
       const sliceAngle = (val / total) * Math.PI * 2;
       const endAngle = startAngle + sliceAngle;
@@ -311,17 +312,6 @@
       ctx.closePath();
       ctx.fillStyle = colors[i % colors.length];
       ctx.fill();
-
-      /* Label */
-      const midAngle = startAngle + sliceAngle / 2;
-      const labelX = centerX + Math.cos(midAngle) * (radius * 0.65);
-      const labelY = centerY + Math.sin(midAngle) * (radius * 0.65);
-      ctx.fillStyle = 'white';
-      ctx.font = 'bold 11px Inter';
-      ctx.textAlign = 'center';
-      ctx.fillText(key, labelX, labelY - 6);
-      ctx.font = '10px Inter';
-      ctx.fillText(Math.round(val / total * 100) + '%', labelX, labelY + 8);
 
       startAngle = endAngle;
     });
@@ -334,7 +324,35 @@
     ctx.fillStyle = 'rgba(255,255,255,0.7)';
     ctx.font = 'bold 14px Inter';
     ctx.textAlign = 'center';
-    ctx.fillText('100%', centerX, centerY + 5);
+    ctx.textBaseline = 'middle';
+    ctx.fillText('100%', centerX, centerY);
+
+    /* Legend below the chart - 2 rows */
+    const keys = Object.keys(data);
+    const vals = Object.values(data);
+    const row1Y = centerY + radius + 12;
+    const row2Y = row1Y + 16;
+    const col1X = centerX - 70;
+    const col2X = centerX + 20;
+
+    keys.forEach((key, i) => {
+      const pct = Math.round(vals[i] / total * 100);
+      const row = i < 2 ? 0 : 1;
+      const col = i % 2;
+      const lx = col === 0 ? col1X : col2X;
+      const ly = row === 0 ? row1Y : row2Y;
+
+      ctx.beginPath();
+      ctx.arc(lx, ly, 4, 0, Math.PI * 2);
+      ctx.fillStyle = colors[i % colors.length];
+      ctx.fill();
+
+      ctx.fillStyle = 'rgba(255,255,255,0.8)';
+      ctx.font = '10px Inter';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(key + ' ' + pct + '%', lx + 8, ly);
+    });
   }
 
   function drawProgressCircle(svg, percent, color = '#c8a46f') {
@@ -378,7 +396,7 @@
             <h2 class="dash__section-title">Welcome back, ${userData.name || 'Guardian'}</h2>
             <p class="dash__section-subtitle">Here's your environmental impact overview</p>
           </div>
-          <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">
+          <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             New Donation
           </button>
@@ -494,7 +512,7 @@
             <h2 class="dash__section-title">My Donations</h2>
             <p class="dash__section-subtitle">Track all your contributions and their impact</p>
           </div>
-          <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">
+          <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             New Donation
           </button>
@@ -769,7 +787,7 @@
             <h2 class="dash__section-title">Reports & Analytics</h2>
             <p class="dash__section-subtitle">Detailed insights into your environmental impact</p>
           </div>
-          <button class="dash__btn dash__btn--outline" onclick="window.location.href='404.html'">
+          <button class="dash__btn dash__btn--outline" onclick="window.location.href='../404.html'">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Export Report
           </button>
@@ -989,7 +1007,7 @@
               <label class="dash__form-label">Phone Number</label>
               <input type="tel" class="dash__form-input" value="+1 (555) 123-4567" placeholder="Enter your phone" />
             </div>
-            <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">Save Changes</button>
+            <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">Save Changes</button>
           </div>
 
           <div class="dash__card">
@@ -1008,7 +1026,7 @@
               <label class="dash__form-label">Confirm Password</label>
               <input type="password" class="dash__form-input" placeholder="Confirm new password" />
             </div>
-            <button class="dash__btn dash__btn--primary" onclick="window.location.href='404.html'">Update Password</button>
+            <button class="dash__btn dash__btn--primary" onclick="window.location.href='../404.html'">Update Password</button>
           </div>
         </div>
 
